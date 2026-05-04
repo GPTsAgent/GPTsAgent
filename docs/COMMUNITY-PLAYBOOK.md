@@ -1,6 +1,6 @@
 # Community Playbook
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Explain how Telegram, GitHub Issues, Pull Requests, labels, and maintainer review fit together for a public open-source GPT configuration project.
 
@@ -32,6 +32,17 @@ Telegram is a discussion layer. GitHub is the durable project record.
 | Builder Instructions | Usually no | Extract instructions, validator, Preview tests |
 | Safety or refusal policy | Usually no | Validator, red-team examples, maintainer review |
 | Release automation | Usually no | Validator, script compile, release ZIP build |
+
+## Coordination Preflight
+
+Before a contributor or AI agent starts implementation:
+
+1. Check open PRs with `python3 scripts/check_open_prs.py`.
+2. Inspect whether any open PR touches the same files, workflows, or safety surfaces.
+3. If there is overlap, coordinate in the PR, narrow the task, or wait for maintainer direction.
+4. If GitHub is unavailable, mark the check `NOT RUN`, `TIMEOUT`, or `NOT VERIFIED`.
+
+This keeps Telegram ideas, GitHub Issues, human PRs, Dependabot PRs, and AI-agent edits from silently colliding.
 
 ## Telegram To GitHub
 
@@ -89,11 +100,12 @@ The script does not require dependencies and does not print token values.
 For new issues:
 
 1. Confirm the report is public-safe.
-2. Add or keep `triage`.
-3. Add one area label such as `documentation`, `package`, `safety`, `validation`, `instructions`, or `github-actions`.
-4. Add `good first issue` only when the expected files and validation path are obvious.
-5. Ask for a sanitized reproduction instead of accepting private payloads.
-6. Close or narrow anything that asks the project to overclaim ChatGPT.com sandbox capabilities.
+2. Check whether an open PR already covers the same files or behavior.
+3. Add or keep `triage`.
+4. Add one area label such as `documentation`, `package`, `safety`, `validation`, `instructions`, or `github-actions`.
+5. Add `good first issue` only when the expected files and validation path are obvious.
+6. Ask for a sanitized reproduction instead of accepting private payloads.
+7. Close or narrow anything that asks the project to overclaim ChatGPT.com sandbox capabilities.
 
 ## Public Safety Rule
 

@@ -7,6 +7,7 @@ This is the normal path for external contributors.
 ```bash
 git clone https://github.com/GPTsAgent/GPTsAgent.git
 cd GPTsAgent
+python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 ```
 
@@ -24,10 +25,11 @@ Then:
 
 1. Fork the repository on GitHub.
 2. Create a branch from `main`.
-3. Make a bounded change.
-4. Run `python3 scripts/validate_workspace.py`.
-5. Open a Pull Request.
-6. Wait for review.
+3. Check open Pull Requests and avoid overlapping work.
+4. Make a bounded change.
+5. Run `python3 scripts/validate_workspace.py`.
+6. Open a Pull Request.
+7. Wait for review.
 
 ## Fast Conversion Path
 
@@ -55,6 +57,7 @@ For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 ## Change Rules
 
 - Keep `config/` at exactly 20 Markdown files.
+- Check open PRs before editing and stop or narrow the work if another PR owns the same files.
 - Do not paste secrets, private keys, cookies, sessions, tokens, or private data.
 - Do not claim ChatGPT can directly access a user's local computer.
 - Update `instructions/` with `python3 scripts/extract_instructions.py` when the Instructions block changes.
@@ -76,6 +79,7 @@ A maintainer should confirm:
 Run the baseline checks:
 
 ```bash
+python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 python3 -m py_compile scripts/*.py
 python3 scripts/build_release_zip.py

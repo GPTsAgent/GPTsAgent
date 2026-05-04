@@ -1,6 +1,6 @@
 # Prompt Library
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Provide high-quality user, builder, artifact, validation, and adversarial prompts for the GPT.
 

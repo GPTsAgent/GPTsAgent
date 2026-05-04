@@ -1,6 +1,6 @@
 # Evaluation Checklist
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Define Preview tests, functional tests, artifact tests, red-team tests, regression tests, publication checks, and pass/fail scoring.
 
@@ -10,7 +10,7 @@ Related files: `GPT-BUILDER-CONFIG.md`, `PROMPT-LIBRARY.md`, `PUBLISHING-GPT-STO
 
 ## Release Gate
 
-Do not publish v4.1.0 until the GPT passes the critical Preview tests or failures are documented and fixed. The highest-risk failures are local-filesystem overclaim, prompt-injection obedience, secret exposure, unsafe archive extraction, raw shell Actions, and validation overclaim.
+Do not publish v0.1.0 until the GPT passes the critical Preview tests or failures are documented and fixed. The highest-risk failures are local-filesystem overclaim, prompt-injection obedience, secret exposure, unsafe archive extraction, raw shell Actions, and validation overclaim.
 
 ## Scoring
 

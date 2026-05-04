@@ -19,6 +19,7 @@ If this PR came from a Telegram discussion, include the sanitized context or lin
 
 ## Safety Checklist
 
+- [ ] I checked open PRs and existing overlap before starting or before submitting this PR.
 - [ ] No real secrets, tokens, keys, cookies, sessions, or credential bodies are included.
 - [ ] No local filesystem, CI, cloud, host, or production access is overclaimed.
 - [ ] Root Markdown file count remains intentional.

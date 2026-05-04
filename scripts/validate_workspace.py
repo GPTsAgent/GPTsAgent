@@ -12,9 +12,10 @@ CONFIG = ROOT / "config"
 INSTRUCTIONS = ROOT / "instructions"
 PROFILE = ROOT / "profile" / "README.md"
 README = ROOT / "README.md"
+AGENTS = ROOT / "AGENTS.md"
 CONFIG_README = CONFIG / "README.md"
 TELEGRAM_URL = "https://t.me/GPTsAgentChat"
-EXPECTED_VERSION = "v4.1.0"
+EXPECTED_VERSION = "v0.1.0"
 
 EXPECTED_CONFIG_FILES = [
     "ACTIONS-API-BLUEPRINT.md",
@@ -48,6 +49,7 @@ SECRET_PATTERNS = {
 }
 
 COMMUNITY_FILES = [
+    Path("AGENTS.md"),
     Path("CONTRIBUTING.md"),
     Path("SUPPORT.md"),
     Path("docs/CONTRIBUTOR-WORKFLOW.md"),
@@ -55,6 +57,7 @@ COMMUNITY_FILES = [
     Path("docs/OFFICIAL-DOCS-BASIS.md"),
     Path("docs/PILOT-LAUNCH-CHECKLIST.md"),
     Path("docs/ROADMAP.md"),
+    Path("scripts/check_open_prs.py"),
     Path(".github/ISSUE_TEMPLATE/community_idea.yml"),
     Path(".github/labels.json"),
 ]
@@ -171,6 +174,36 @@ def scan_private_path_references() -> list[str]:
     return hits
 
 
+def scan_legacy_version_references() -> list[str]:
+    patterns = [
+        re.compile(r"\bv4\.1\b"),
+        re.compile(r"\bv4\.1\.0\b"),
+        re.compile(r"\bv4\.0\.0\b"),
+        re.compile(r"\bv5\."),
+        re.compile(r"\bv0\.0\.1\b"),
+    ]
+    hits: list[str] = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(ROOT)
+        if any(part in SKIP_DIRS for part in rel.parts):
+            continue
+        if path.suffix.lower() in SKIP_SUFFIXES:
+            continue
+        try:
+            text = read(path)
+        except UnicodeDecodeError:
+            continue
+        for pattern in patterns:
+            match = pattern.search(text)
+            if match:
+                line = text.count("\n", 0, match.start()) + 1
+                hits.append(f"{rel}:{line}: {match.group(0)}")
+                break
+    return hits
+
+
 def extract_version(path: Path) -> str | None:
     text = read(path)
     match = re.search(r"^Version:\s*`([^`]+)`", text, re.M)
@@ -187,12 +220,14 @@ def main() -> int:
     builder_config = CONFIG / "GPT-BUILDER-CONFIG.md"
     profile_text = read(PROFILE) if PROFILE.exists() else ""
     root_readme_text = read(README) if README.exists() else ""
+    agents_text = read(AGENTS) if AGENTS.exists() else ""
     config_readme_text = read(CONFIG_README) if CONFIG_README.exists() else ""
     secret_hits = scan_secrets()
     community_missing = [str(path) for path in COMMUNITY_FILES if not (ROOT / path).exists()]
     community_text = "\n".join(read(ROOT / path) for path in COMMUNITY_FILES if (ROOT / path).exists())
     undefined_labels = scan_undefined_issue_labels()
     private_path_hits = scan_private_path_references()
+    legacy_version_hits = scan_legacy_version_references()
     versioned_paths = [path for path in CONFIG.glob("*.md")] + [INSTRUCTIONS / "INSTRUCTIONS.md"]
     version_mismatches = []
     for path in versioned_paths:
@@ -217,12 +252,17 @@ def main() -> int:
         ),
         check(PROFILE.exists(), "profile README exists"),
         check("GPTsAgent" in profile_text and "Sandbox File Operator" in profile_text, "profile README names GPTsAgent and Sandbox File Operator"),
-        check("v4.1.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
+        check("v0.1.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
+        check(AGENTS.exists(), "root AGENTS.md exists for AI-agent contributors"),
+        check("scripts/check_open_prs.py" in agents_text and "open pr" in agents_text.lower(), "root AGENTS.md requires open PR coordination"),
+        check((ROOT / "scripts" / "check_open_prs.py").exists(), "open PR checker script exists"),
+        check("AGENTS.md" in root_readme_text and "check_open_prs.py" in root_readme_text, "root README documents agent and PR-check surfaces"),
         check("docs/OFFICIAL-DOCS-BASIS.md" in config_readme_text and "_codex-session" not in config_readme_text, "config README points to public docs basis instead of private session notes"),
         check("## Recommended Model" in read(builder_config) and "not combined with Actions" in read(builder_config), "GPT Builder config includes current model and Apps/Actions caveat"),
         check(not community_missing, "community contributor files exist", ", ".join(community_missing)),
         check(TELEGRAM_URL in community_text and "Contribution Idea" in community_text, "community path names Telegram and Contribution Idea workflow"),
         check(not undefined_labels, "issue-template labels are defined in .github/labels.json", "; ".join(undefined_labels)),
+        check(not legacy_version_hits, "no stale public version references remain", "; ".join(legacy_version_hits[:10])),
         check(not private_path_hits, "no private host paths or token-file references were found", "; ".join(private_path_hits[:10])),
         check(not secret_hits, "no obvious secret-like tokens were found", "; ".join(secret_hits[:10])),
     ]

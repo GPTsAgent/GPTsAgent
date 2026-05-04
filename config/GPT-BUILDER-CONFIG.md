@@ -1,8 +1,8 @@
 # GPT Builder Configuration
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
-Purpose: Provide copy-ready GPT Builder fields and the canonical v4.1 Instructions block.
+Purpose: Provide copy-ready GPT Builder fields and the canonical v0.1 Instructions block.
 
 Use this file when: creating, updating, preview-testing, or publishing Sandbox File Operator in GPT Builder.
 

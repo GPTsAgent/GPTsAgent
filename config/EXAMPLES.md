@@ -1,6 +1,6 @@
 # Examples
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Show realistic dialogues, expected behavior, good and bad examples, artifact handoffs, refusals, archive comparisons, and update workflows.
 

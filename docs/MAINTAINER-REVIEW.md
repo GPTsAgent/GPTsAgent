@@ -5,6 +5,7 @@ Use this checklist before accepting contributions.
 ## Review Checklist
 
 - The change has a clear purpose.
+- Open PR overlap was checked or explicitly marked `NOT RUN`, `TIMEOUT`, or `NOT VERIFIED`.
 - Root package structure remains intentional.
 - `config/` still has exactly 20 Markdown files.
 - `instructions/SYSTEM-INSTRUCTIONS.txt` matches `config/GPT-BUILDER-CONFIG.md`.
@@ -20,6 +21,7 @@ Use this checklist before accepting contributions.
 Local command:
 
 ```bash
+python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 python3 scripts/sync_labels.py
 ```

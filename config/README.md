@@ -1,8 +1,8 @@
 # Sandbox File Operator Configuration Pack
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
-Purpose: Explain the v4 Custom GPT package, its public product promise, installation path, safe defaults, and 20-file Knowledge architecture.
+Purpose: Explain the public-pilot Custom GPT package, its product promise, installation path, safe defaults, and 20-file Knowledge architecture.
 
 Use this file when: a GPT builder needs to understand, install, test, or hand off the complete package.
 
@@ -14,7 +14,7 @@ Sandbox File Operator is a Custom GPT configuration package for ChatGPT.com. It 
 
 It is an operating wrapper, not a trained model, not a local desktop agent, and not a production automation system. The value of the package comes from a strong GPT Builder Instructions block plus retrieval-friendly Knowledge files that reinforce workflows, templates, safety rules, and evaluation criteria.
 
-v4.1.0 is a public-pilot hardening release. It keeps the package file-upload-first, adds explicit Builder model/capability caveats, and moves research notes into public project documentation.
+v0.1.0 is a public-pilot hardening release. It keeps the package file-upload-first, adds explicit Builder model/capability caveats, and moves research notes into public project documentation.
 
 ## Who It Is For
 
@@ -128,7 +128,7 @@ I uploaded <PROJECT_ZIP>. Safety-scan it before extraction, map the project, do 
 
 ## Research Basis
 
-v4.1 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
+v0.1.0 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
 
 ## Operational Rule
 

@@ -11,9 +11,10 @@ It contains:
 - `config/`: 20 GPT Builder Knowledge files.
 - `instructions/`: system Instructions extracted from `config/GPT-BUILDER-CONFIG.md`.
 - `profile/`: organization profile source.
-- `scripts/`: validation and packaging tools.
+- `scripts/`: PR coordination, validation, and packaging tools.
 - `docs/`: contributor and maintainer guidance.
 - `.github/labels.json`: source-of-truth label taxonomy for issue templates and triage.
+- `AGENTS.md`: repo-local operating rules for AI agents and contributor automation.
 
 ## Organization Profile Repository
 
@@ -38,6 +39,7 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | Surface | Purpose |
 |---|---|
 | `CONTRIBUTING.md` | Short rules and baseline commands. |
+| `AGENTS.md` | AI-agent preflight, ownership, validation, and safety rules. |
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |
 | `docs/OFFICIAL-DOCS-BASIS.md` | Official OpenAI source notes for Builder, Knowledge, Actions, Data Analysis, and publishing assumptions. |
@@ -46,6 +48,7 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `.github/ISSUE_TEMPLATE/` | Structured bug, safety, validation, package, docs, and contribution idea reports. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Required safety and validation checklist. |
 | `.github/labels.json` | Desired public issue label set. |
+| `scripts/check_open_prs.py` | Read-only GitHub PR coordination check. |
 
 ## Invariant
 

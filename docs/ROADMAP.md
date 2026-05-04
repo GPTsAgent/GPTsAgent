@@ -1,6 +1,6 @@
 # Public Roadmap
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Give contributors a public-safe roadmap that separates current pilot work from later backend or automation ambitions.
 

@@ -4,6 +4,7 @@ GPTsAgent contributions should improve the Sandbox File Operator package without
 
 ## Ground Rules
 
+- Before starting work, check open Pull Requests with `python3 scripts/check_open_prs.py` and avoid overlapping files or tightly related surfaces.
 - Keep `config/` at exactly 20 Markdown Knowledge files unless the manifest and validator are deliberately changed.
 - Do not add real secrets, tokens, private keys, cookies, sessions, or credential bodies.
 - Keep local-machine, production, CI, cloud, and host claims honest. Use `NOT VERIFIED` when evidence is missing.
@@ -41,6 +42,7 @@ GPTsAgent contributions should improve the Sandbox File Operator package without
 Run:
 
 ```bash
+python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 python3 -m py_compile scripts/*.py
 python3 scripts/sync_labels.py

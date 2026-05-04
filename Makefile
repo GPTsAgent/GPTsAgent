@@ -1,4 +1,11 @@
-.PHONY: validate check extract-instructions release-zip labels-dry-run clean
+.PHONY: prework open-prs validate check extract-instructions release-zip labels-dry-run clean
+
+prework:
+	git status --short --branch
+	python3 scripts/check_open_prs.py
+
+open-prs:
+	python3 scripts/check_open_prs.py
 
 validate:
 	python3 scripts/validate_workspace.py

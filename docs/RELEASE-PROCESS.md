@@ -5,6 +5,7 @@ Use this when preparing a public update.
 ## Preflight
 
 ```bash
+python3 scripts/check_open_prs.py
 python3 scripts/extract_instructions.py
 python3 scripts/validate_workspace.py
 python3 scripts/sync_labels.py
@@ -20,6 +21,7 @@ make check
 Expected result:
 
 - `scripts/validate_workspace.py` returns `Status: PASS`.
+- `scripts/check_open_prs.py` reports no overlapping open PRs for the release files.
 - `scripts/sync_labels.py` returns a dry-run label report without errors.
 - `docs/OFFICIAL-DOCS-BASIS.md` and `docs/PILOT-LAUNCH-CHECKLIST.md` are current if Builder behavior or public launch claims changed.
 - `dist/GPTsAgent-working-directory.zip` exists.

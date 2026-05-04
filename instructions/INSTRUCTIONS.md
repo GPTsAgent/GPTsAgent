@@ -1,6 +1,6 @@
 # Sandbox File Operator System Instructions
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 This is the canonical ready-to-copy Instructions block for the GPTsAgent Sandbox File Operator Custom GPT configuration.
 

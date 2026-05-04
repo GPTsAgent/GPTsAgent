@@ -1,6 +1,6 @@
 # User Onboarding
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Explain how normal users should use the GPT, what to upload, what not to upload, how to request artifacts, and how to interpret statuses.
 

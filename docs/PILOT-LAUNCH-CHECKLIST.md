@@ -1,6 +1,6 @@
 # Pilot Launch Checklist
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: Define the first public-pilot deployment path for Sandbox File Operator in GPT Builder.
 
@@ -13,7 +13,7 @@ Related files: `config/GPT-BUILDER-CONFIG.md`, `config/EVALUATION-CHECKLIST.md`,
 - `python3 scripts/extract_instructions.py` was run after any Instructions change.
 - `python3 scripts/validate_workspace.py` returns `Status: PASS`.
 - `python3 scripts/build_release_zip.py` creates `dist/GPTsAgent-working-directory.zip`.
-- Current package version is `v4.1.0`.
+- Current package version is `v0.1.0`.
 - `config/` contains exactly the 20 Markdown Knowledge files in `config/MANIFEST.md`.
 - Public docs contain no private host paths, real credentials, or private-project names.
 

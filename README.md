@@ -4,7 +4,7 @@ Canonical development workspace for GPTsAgent.
 
 GPTsAgent is an open project for building a disciplined GPT Builder wrapper around ChatGPT.com sandbox work. The current flagship package is **Sandbox File Operator**: a Custom GPT configuration that makes uploaded file and ZIP archive work more agent-like while staying honest about sandbox boundaries.
 
-Current package version: `v4.1.0`.
+Current package version: `v0.1.0`.
 
 This repository is a public pilot. It is intended to be cloneable, reviewable, and easy for contributors to improve without confusing it with a private host-level project.
 
@@ -33,9 +33,10 @@ No dependency installation is required for the core checks. Python 3.10+ and Git
 | `config/` | The exact 20 Markdown Knowledge files for GPT Builder. |
 | `instructions/` | The canonical system Instructions block extracted from `config/GPT-BUILDER-CONFIG.md`. |
 | `profile/` | Organization profile README source for `GPTsAgent/.github`. |
-| `scripts/` | Local validation, instruction extraction, and release ZIP helpers. |
+| `scripts/` | Local PR coordination, validation, instruction extraction, and release ZIP helpers. |
 | `docs/` | Contributor workflow, community playbook, roadmap, architecture, release, and maintainer documentation. |
 | `.github/` | PR/issue templates, label taxonomy, Dependabot, CODEOWNERS placeholder, and CI for contributions. |
+| `AGENTS.md` | Repo-local rules for AI agents and contributor automation. |
 
 ## Published Repositories
 
@@ -79,19 +80,22 @@ Pick one small lane:
 
 1. Fork `GPTsAgent/GPTsAgent`.
 2. Create a branch.
-3. Change files in `config/`, `instructions/`, `profile/`, `docs/`, or `scripts/`.
-4. Run `python3 scripts/validate_workspace.py`.
-5. Open a Pull Request and use the checklist.
+3. Run `python3 scripts/check_open_prs.py` and avoid overlapping open PRs.
+4. Change files in `config/`, `instructions/`, `profile/`, `docs/`, or `scripts/`.
+5. Run `python3 scripts/validate_workspace.py`.
+6. Open a Pull Request and use the checklist.
 
 The maintainer reviews the PR, confirms validation, and merges accepted changes into the canonical project.
 
 ## Development Commands
 
 ```bash
+python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 python3 scripts/extract_instructions.py
 python3 scripts/build_release_zip.py
 python3 scripts/sync_labels.py
+make prework
 make check
 ```
 
@@ -101,6 +105,7 @@ make check
 - `instructions/SYSTEM-INSTRUCTIONS.txt` matches the Instructions block in `config/GPT-BUILDER-CONFIG.md`.
 - the profile README exists and names the project correctly.
 - contributor/community surfaces are present and aligned.
+- repo-local `AGENTS.md` and the open PR checker are present.
 - issue-template labels are defined in `.github/labels.json`.
 - no obvious secret-like token was introduced.
 

@@ -1,6 +1,6 @@
 # Limitations And Disclaimers
 
-Version: `v4.1.0`
+Version: `v0.1.0`
 
 Purpose: State public-safe limitations for sandbox access, validation, secrets, production guarantees, Actions, and Knowledge behavior.
 
