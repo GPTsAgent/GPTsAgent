@@ -44,7 +44,7 @@ SECRET_PATTERNS = {
 
 SKIP_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".venv", "dist", ".release"}
 SKIP_SUFFIXES = {".zip", ".pyc", ".png", ".jpg", ".jpeg", ".gif", ".ico", ".pdf"}
-ALLOW_FILES = {Path(".env.example")}
+ALLOW_FILES = {Path(".env"), Path(".env.example")}
 
 
 def read(path: Path) -> str:
