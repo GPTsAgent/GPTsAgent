@@ -1,6 +1,6 @@
 # Versioning Roadmap
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Document package evolution, current version, future Actions backend, future eval harness, and specialized skill packs.
 
@@ -27,15 +27,16 @@ Use semantic-style versions for the configuration package:
 | v1 | Baseline | Clarified uploaded-file workflows and user-facing purpose. |
 | v2 | Agent wrapper | Added protocol-style workflows and tool orchestration. |
 | v3 | Hardened pack | Strengthened sandbox boundaries, prompt injection, Actions caveats, and evaluation. |
-| v4.0.0 | Public-ready operating layer | Rewrites all 20 files with consistent metadata, stronger Instructions, artifact contract, safety model, and red-team checklist. |
+| v4.0.0 | Public-ready operating layer | Rewrote all 20 files with consistent metadata, stronger Instructions, artifact contract, safety model, and red-team checklist. |
+| v4.1.0 | Public-pilot hardening | Adds official OpenAI docs basis, Builder model/capability caveats, pilot launch checklist, and stronger validation for public surfaces. |
 
 ## Current Version
 
-`v4.0.0`
+`v4.1.0`
 
-Release theme: production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
+Release theme: public-pilot hardening for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
 
-## v4.0.0 Scope
+## v4.0.0 Foundation
 
 - Instructions-first design.
 - Retrieval-friendly 20-file Knowledge architecture.
@@ -48,6 +49,15 @@ Release theme: production-grade Custom GPT operating wrapper for uploaded files,
 - Copy-ready report templates.
 - Strong Preview, regression, artifact, and red-team evaluation checklist.
 - Public GPT Store publishing guidance.
+
+## v4.1.0 Scope
+
+- Public pilot status made explicit in repository docs.
+- Official OpenAI docs basis moved into public `docs/` instead of private session notes.
+- Builder model selection guidance added without hard-coding model names.
+- Apps/connectors and Actions caveat added across setup, publishing, and capability docs.
+- Pilot launch checklist added for first deployment and Preview evidence.
+- Workspace validator strengthened for version consistency, public docs, and private-path hygiene.
 
 ## Future v4.x Patches
 

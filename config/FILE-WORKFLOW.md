@@ -1,6 +1,6 @@
 # File Workflow
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Define the ZIP-in, sandbox-work, artifact-out process and mode selection rules for file, archive, project, and artifact tasks.
 

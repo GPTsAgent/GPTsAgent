@@ -1,5 +1,13 @@
 # Community Playbook
 
+Version: `v4.1.0`
+
+Purpose: Explain how Telegram, GitHub Issues, Pull Requests, labels, and maintainer review fit together for a public open-source GPT configuration project.
+
+Use this file when: routing contributor questions, converting Telegram discussion into GitHub work, or training new maintainers on the public workflow.
+
+Related files: `README.md`, `CONTRIBUTING.md`, `docs/OFFICIAL-DOCS-BASIS.md`, `docs/PILOT-LAUNCH-CHECKLIST.md`
+
 GPTsAgent is public by default, but it is still a safety-sensitive configuration project. This playbook explains how discussion, issues, pull requests, labels, and maintainer review fit together.
 
 ## Channels
@@ -44,6 +52,10 @@ Expected improvement: <what should become easier or safer>
 Suggested scope: <files or docs likely affected>
 Validation: <command, Preview test, or NOT VERIFIED reason>
 ```
+
+## Builder / Pilot Note
+
+Use `docs/PILOT-LAUNCH-CHECKLIST.md` for the first GPT Builder draft and `docs/OFFICIAL-DOCS-BASIS.md` when updating settings or launch claims.
 
 ## Label Taxonomy
 

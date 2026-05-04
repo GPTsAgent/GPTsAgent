@@ -11,7 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config"
 INSTRUCTIONS = ROOT / "instructions"
 PROFILE = ROOT / "profile" / "README.md"
+README = ROOT / "README.md"
+CONFIG_README = CONFIG / "README.md"
 TELEGRAM_URL = "https://t.me/GPTsAgentChat"
+EXPECTED_VERSION = "v4.1.0"
 
 EXPECTED_CONFIG_FILES = [
     "ACTIONS-API-BLUEPRINT.md",
@@ -49,6 +52,8 @@ COMMUNITY_FILES = [
     Path("SUPPORT.md"),
     Path("docs/CONTRIBUTOR-WORKFLOW.md"),
     Path("docs/COMMUNITY-PLAYBOOK.md"),
+    Path("docs/OFFICIAL-DOCS-BASIS.md"),
+    Path("docs/PILOT-LAUNCH-CHECKLIST.md"),
     Path("docs/ROADMAP.md"),
     Path(".github/ISSUE_TEMPLATE/community_idea.yml"),
     Path(".github/labels.json"),
@@ -166,21 +171,40 @@ def scan_private_path_references() -> list[str]:
     return hits
 
 
+def extract_version(path: Path) -> str | None:
+    text = read(path)
+    match = re.search(r"^Version:\s*`([^`]+)`", text, re.M)
+    if match:
+        return match.group(1)
+    return None
+
+
 def main() -> int:
     config_files = sorted(path.name for path in CONFIG.glob("*.md") if path.is_file())
     instruction_block = extract_instruction_block()
     system_instructions = INSTRUCTIONS / "SYSTEM-INSTRUCTIONS.txt"
     instructions_md = INSTRUCTIONS / "INSTRUCTIONS.md"
+    builder_config = CONFIG / "GPT-BUILDER-CONFIG.md"
     profile_text = read(PROFILE) if PROFILE.exists() else ""
+    root_readme_text = read(README) if README.exists() else ""
+    config_readme_text = read(CONFIG_README) if CONFIG_README.exists() else ""
     secret_hits = scan_secrets()
     community_missing = [str(path) for path in COMMUNITY_FILES if not (ROOT / path).exists()]
     community_text = "\n".join(read(ROOT / path) for path in COMMUNITY_FILES if (ROOT / path).exists())
     undefined_labels = scan_undefined_issue_labels()
     private_path_hits = scan_private_path_references()
+    versioned_paths = [path for path in CONFIG.glob("*.md")] + [INSTRUCTIONS / "INSTRUCTIONS.md"]
+    version_mismatches = []
+    for path in versioned_paths:
+        if path.exists():
+            version = extract_version(path)
+            if version != EXPECTED_VERSION:
+                version_mismatches.append(f"{path.relative_to(ROOT)}: {version or 'missing'}")
 
     checks = [
         check(CONFIG.exists(), "config directory exists"),
         check(config_files == EXPECTED_CONFIG_FILES, "config has exactly the expected 20 Markdown files", f"found {len(config_files)}"),
+        check(not version_mismatches, f"version strings match {EXPECTED_VERSION}", "; ".join(version_mismatches)),
         check(instruction_block is not None, "GPT-BUILDER-CONFIG.md contains a ready-to-copy Instructions block"),
         check(system_instructions.exists(), "SYSTEM-INSTRUCTIONS.txt exists"),
         check(
@@ -193,6 +217,9 @@ def main() -> int:
         ),
         check(PROFILE.exists(), "profile README exists"),
         check("GPTsAgent" in profile_text and "Sandbox File Operator" in profile_text, "profile README names GPTsAgent and Sandbox File Operator"),
+        check("v4.1.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
+        check("docs/OFFICIAL-DOCS-BASIS.md" in config_readme_text and "_codex-session" not in config_readme_text, "config README points to public docs basis instead of private session notes"),
+        check("## Recommended Model" in read(builder_config) and "not combined with Actions" in read(builder_config), "GPT Builder config includes current model and Apps/Actions caveat"),
         check(not community_missing, "community contributor files exist", ", ".join(community_missing)),
         check(TELEGRAM_URL in community_text and "Contribution Idea" in community_text, "community path names Telegram and Contribution Idea workflow"),
         check(not undefined_labels, "issue-template labels are defined in .github/labels.json", "; ".join(undefined_labels)),

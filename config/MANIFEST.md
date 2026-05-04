@@ -1,6 +1,6 @@
 # Manifest
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: List the exact 20 root Markdown files, package identity, intended GPT name, recommended capabilities, upload order, and validation summary.
 
@@ -11,7 +11,7 @@ Related files: `README.md`, `GPT-BUILDER-CONFIG.md`, `EVALUATION-CHECKLIST.md`, 
 ## Package Identity
 
 - Package name: Sandbox File Operator GPT Config Pack
-- Version: `v4.0.0`
+- Version: `v4.1.0`
 - Date: `2026-05-04`
 - Intended GPT name: Sandbox File Operator
 - Package type: 20-file Custom GPT Knowledge/configuration package
@@ -56,7 +56,7 @@ Upload in the slot order above. The order groups setup, operating model, safety,
 | Web search | On when current facts and citations matter |
 | Canvas | Optional |
 | Image generation | Off by default |
-| Apps/connectors | Optional and scoped |
+| Apps/connectors | Optional and scoped; keep Actions off |
 | Actions | Off by default |
 
 ## Validation Summary
@@ -69,6 +69,8 @@ Upload in the slot order above. The order groups setup, operating model, safety,
 - The package must not claim direct local filesystem access inside ChatGPT.com.
 - The package must not tell users to upload secrets.
 - Actions must be optional and must forbid raw shell endpoints.
+- Apps/connectors and Actions should not be enabled together for the public pilot.
+- Builder model selection should be checked in the current GPT Builder UI before publishing.
 - Artifact statuses must be exactly `PASS`, `PARTIAL`, `FAILED`, `SKIPPED`, `NOT RUN`, `NOT VERIFIED`, and `TIMEOUT`.
 - Evaluation must include red-team and regression tests.
 

@@ -1,5 +1,13 @@
 # Public Roadmap
 
+Version: `v4.1.0`
+
+Purpose: Give contributors a public-safe roadmap that separates current pilot work from later backend or automation ambitions.
+
+Use this file when: opening good first issues, planning public-pilot work, or deciding whether a proposed feature belongs now, next, later, or not by default.
+
+Related files: `README.md`, `docs/COMMUNITY-PLAYBOOK.md`, `docs/PILOT-LAUNCH-CHECKLIST.md`, `config/VERSIONING-ROADMAP.md`
+
 This roadmap is for contributors. It describes useful public work without promising dates, background execution, production access, or unavailable ChatGPT.com capabilities.
 
 ## Current Theme
@@ -16,6 +24,8 @@ These tasks are suitable for near-term issues and pull requests:
 - Keep `instructions/SYSTEM-INSTRUCTIONS.txt` synchronized with `config/GPT-BUILDER-CONFIG.md`.
 - Improve local validation while keeping the project dependency-free.
 - Keep GitHub issue templates aligned with `.github/labels.json`.
+- Run the first GPT Builder pilot using `docs/PILOT-LAUNCH-CHECKLIST.md`.
+- Keep official OpenAI docs assumptions current in `docs/OFFICIAL-DOCS-BASIS.md`.
 
 ## Next
 

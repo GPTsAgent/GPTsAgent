@@ -1,6 +1,6 @@
 # Actions API Blueprint
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Design an optional future Actions backend with safe high-level endpoints, authentication, privacy, audit logging, rate limits, and artifact expiration.
 
@@ -11,6 +11,8 @@ Related files: `CAPABILITIES-MAP.md`, `SECRET-HYGIENE.md`, `SAFETY-REFUSAL-POLIC
 ## Default Position
 
 Actions are optional and OFF by default. The GPT works first as an uploaded-file sandbox assistant. Do not configure Actions until there is a real backend, threat model, OpenAPI schema, authentication model, privacy policy, test plan, audit log, rate limits, and artifact lifecycle.
+
+Current public-pilot rule: do not combine Actions with Apps/connectors in the same GPT. Keep Actions off unless the backend exists and current Builder docs explicitly support the intended capability mix.
 
 ## Non-Negotiable Prohibition
 

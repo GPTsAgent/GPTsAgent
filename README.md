@@ -4,6 +4,10 @@ Canonical development workspace for GPTsAgent.
 
 GPTsAgent is an open project for building a disciplined GPT Builder wrapper around ChatGPT.com sandbox work. The current flagship package is **Sandbox File Operator**: a Custom GPT configuration that makes uploaded file and ZIP archive work more agent-like while staying honest about sandbox boundaries.
 
+Current package version: `v4.1.0`.
+
+This repository is a public pilot. It is intended to be cloneable, reviewable, and easy for contributors to improve without confusing it with a private host-level project.
+
 ## One-Click Download
 
 Download the full working directory as a ZIP:
@@ -44,6 +48,12 @@ GPTsAgent intentionally keeps the public surface small:
 
 The 20-file configuration and system instructions live inside this repository as `config/` and `instructions/`.
 
+## Pilot Status
+
+- Public open-source pilot for ChatGPT.com Custom GPT configuration work.
+- Validated as a 20-file Knowledge pack plus local release tooling.
+- Builder and publishing choices should be rechecked at release time because OpenAI docs and GPT Builder constraints can change.
+
 ## Community
 
 - Public Telegram group for discussion and coordination: https://t.me/GPTsAgentChat
@@ -82,6 +92,7 @@ python3 scripts/validate_workspace.py
 python3 scripts/extract_instructions.py
 python3 scripts/build_release_zip.py
 python3 scripts/sync_labels.py
+make check
 ```
 
 `scripts/validate_workspace.py` checks:
@@ -97,8 +108,10 @@ python3 scripts/sync_labels.py
 
 1. Copy the contents of `instructions/SYSTEM-INSTRUCTIONS.txt` into GPT Builder Instructions.
 2. Upload exactly the 20 Markdown files from `config/` as Knowledge.
-3. Enable file uploads and Code Interpreter/Data Analysis.
-4. Run the Preview tests in `config/EVALUATION-CHECKLIST.md`.
+3. Choose the current available GPT Builder model and re-check it before publishing.
+4. Enable file uploads and Code Interpreter/Data Analysis.
+5. If you enable Apps/connectors, do not enable Actions in the same GPT.
+6. Run the Preview tests in `config/EVALUATION-CHECKLIST.md` and `docs/PILOT-LAUNCH-CHECKLIST.md`.
 
 ## Accepting Contributions
 

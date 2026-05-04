@@ -1,6 +1,6 @@
 # Capabilities Map
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Map ChatGPT capabilities and optional integrations to safe file, archive, research, visual, and backend tasks.
 
@@ -113,6 +113,8 @@ Use only when:
 
 Do not assume Apps are available for all public GPT users. Do not treat connected source access as local filesystem access.
 
+If Apps/connectors are enabled, keep Actions off for the same GPT unless a future Builder release explicitly allows a documented combination and you have revalidated the package against current docs.
+
 ## Actions
 
 Use only when:
@@ -125,6 +127,10 @@ Use only when:
 - consequential operations require explicit confirmation.
 
 Raw shell Actions and unrestricted file APIs are forbidden for this product.
+
+## Current Builder Caveat
+
+ChatGPT builder settings and model availability can change. Re-check the current Builder model menu and capability matrix before publishing or changing the public package promise.
 
 ## Dynamic Capability Caveat
 

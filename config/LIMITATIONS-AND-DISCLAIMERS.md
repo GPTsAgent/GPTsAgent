@@ -1,6 +1,6 @@
 # Limitations And Disclaimers
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: State public-safe limitations for sandbox access, validation, secrets, production guarantees, Actions, and Knowledge behavior.
 
@@ -68,6 +68,10 @@ Prompt and instruction confidentiality is best-effort behavior, not a security b
 ## Actions Limitation
 
 Actions require a configured external API. Public GPTs with Actions need a privacy policy URL, authentication, scoped endpoints, user controls, and testing. Without configured Actions, external API operations are `NOT RUN`.
+
+## Builder Drift Limitation
+
+GPT Builder model choices, capability names, file limits, Apps/connectors, Actions, and sharing rules can change. The package gives current configuration guidance, but a builder must re-check the live Builder UI and current OpenAI docs before publishing or changing the public promise.
 
 ## Public Disclaimer Copy
 

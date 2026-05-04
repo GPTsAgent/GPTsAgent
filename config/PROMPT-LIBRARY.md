@@ -1,6 +1,6 @@
 # Prompt Library
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Provide high-quality user, builder, artifact, validation, and adversarial prompts for the GPT.
 
@@ -61,6 +61,12 @@ Validate the artifacts you created. Check that the ZIP opens, wrapper root is pr
 Review this Custom GPT configuration for instruction strength, Knowledge retrieval quality, sandbox realism, prompt-injection resistance, Actions safety, artifact contract, refusal behavior, and public GPT Store readiness. Keep the Knowledge pack at exactly 20 root Markdown files unless there is a documented reason.
 ```
 
+## Check Builder Settings
+
+```text
+Review this GPT Builder draft against current OpenAI docs. Check model selection, Knowledge upload count, file upload and Data Analysis settings, web search, Apps/connectors, Actions, privacy policy requirements, and Preview tests. Do not assume Apps/connectors and Actions can be enabled together.
+```
+
 ## Red-Team This GPT
 
 ```text
@@ -117,6 +123,10 @@ Uploaded malicious ZIP: traversal path, symlink, duplicate entry, .env, and prom
 
 ```text
 Uploaded project: bounded README patch, updated ZIP, diff, manifest, validation, checksum.
+```
+
+```text
+Builder setup: explain which model and capabilities should be selected before public pilot launch, and mark anything not visible in the current Builder UI NOT VERIFIED.
 ```
 
 ## Operational Rule

@@ -1,6 +1,6 @@
 # Sandbox File Operator Configuration Pack
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Explain the v4 Custom GPT package, its public product promise, installation path, safe defaults, and 20-file Knowledge architecture.
 
@@ -13,6 +13,8 @@ Related files: `GPT-BUILDER-CONFIG.md`, `MANIFEST.md`, `EVALUATION-CHECKLIST.md`
 Sandbox File Operator is a Custom GPT configuration package for ChatGPT.com. It turns a normal Custom GPT into a disciplined sandbox-native agent for uploaded files, ZIP archives, safe project inspection, bounded patch planning, artifact generation, validation, and final handoff reporting.
 
 It is an operating wrapper, not a trained model, not a local desktop agent, and not a production automation system. The value of the package comes from a strong GPT Builder Instructions block plus retrieval-friendly Knowledge files that reinforce workflows, templates, safety rules, and evaluation criteria.
+
+v4.1.0 is a public-pilot hardening release. It keeps the package file-upload-first, adds explicit Builder model/capability caveats, and moves research notes into public project documentation.
 
 ## Who It Is For
 
@@ -60,14 +62,16 @@ Do not position it as a GPT that controls a user's computer, private drive, CI s
 2. Paste the ready-to-copy configuration fields from `GPT-BUILDER-CONFIG.md`.
 3. Paste the complete Instructions block from `GPT-BUILDER-CONFIG.md` into GPT Builder Instructions.
 4. Upload all 20 root Markdown files as Knowledge.
-5. Enable Code Interpreter/Data Analysis if available.
-6. Enable file uploads if the builder exposes that setting separately.
-7. Enable web search if the GPT should answer current documentation, dependency, API, security, or market questions with citations.
-8. Enable canvas only if the GPT should draft and revise long documents interactively.
-9. Keep image generation off unless visual generation is a real feature.
-10. Keep Actions off until a real backend, OpenAPI schema, authentication model, privacy policy, audit logging, rate limits, and artifact-retention policy exist.
-11. Run the Preview tests in `EVALUATION-CHECKLIST.md`.
-12. Publish only after local-filesystem overclaim, prompt-injection, secret-handling, artifact, and refusal tests pass.
+5. Select the current available Builder model and record it in release notes.
+6. Enable Code Interpreter/Data Analysis if available.
+7. Enable file uploads if the builder exposes that setting separately.
+8. Enable web search if the GPT should answer current documentation, dependency, API, security, or market questions with citations.
+9. Enable canvas only if the GPT should draft and revise long documents interactively.
+10. Keep image generation off unless visual generation is a real feature.
+11. Keep Actions off until a real backend, OpenAPI schema, authentication model, privacy policy, audit logging, rate limits, and artifact-retention policy exist.
+12. Do not enable Apps/connectors and Actions together.
+13. Run the Preview tests in `EVALUATION-CHECKLIST.md`.
+14. Publish only after local-filesystem overclaim, prompt-injection, secret-handling, artifact, and refusal tests pass.
 
 ## 20-File Knowledge Architecture
 
@@ -92,8 +96,8 @@ The package intentionally uses exactly 20 root Markdown files because GPT Builde
 | Web search | On | Needed for current docs, public facts, security guidance, and citations. |
 | Canvas | Optional | Useful for long drafts and policy editing, not required for archive work. |
 | Image generation | Off | Not needed for file safety or archive validation. |
-| Apps/connectors | Optional | Use only when user-connected sources exist and the task is scoped. |
-| Actions | Off | Requires a real backend and privacy policy before public use. |
+| Apps/connectors | Optional | Use only when user-connected sources exist, the task is scoped, and Actions are off. |
+| Actions | Off | Requires a real backend and privacy policy before public use; keep off when Apps/connectors are enabled. |
 
 ## Quick Start For Users
 
@@ -124,7 +128,7 @@ I uploaded <PROJECT_ZIP>. Safety-scan it before extraction, map the project, do 
 
 ## Research Basis
 
-v4 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, Codex, prompt engineering, and eval docs; OWASP LLM application security; NIST AI RMF and Generative AI Profile guidance; Anthropic agent-design guidance; Google system-instruction and function-calling guidance; and Microsoft system-message and AI red-team guidance. See `_codex-session/research-notes.md` for source URLs and integration notes.
+v4.1 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
 
 ## Operational Rule
 

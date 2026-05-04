@@ -27,6 +27,7 @@ GPTsAgent contributions should improve the Sandbox File Operator package without
 - Improve issue or PR templates so contributors provide better evidence.
 - Improve local validation without adding runtime dependencies.
 - Sync missing labels or improve label descriptions through the label taxonomy file.
+- Improve the pilot launch checklist and official docs basis after real Builder runs.
 
 ## Change Types
 

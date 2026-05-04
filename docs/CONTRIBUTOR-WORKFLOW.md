@@ -37,6 +37,7 @@ Then:
 | Small docs fix | Open a Pull Request after validation. |
 | Safety or validation gap | Open a GitHub Issue first, then patch it. |
 | Unclear scope | Ask in Telegram, then write the narrowest issue possible. |
+| GPT Builder or launch change | Check `docs/OFFICIAL-DOCS-BASIS.md` and update `docs/PILOT-LAUNCH-CHECKLIST.md` if needed. |
 
 For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 
@@ -49,6 +50,7 @@ For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 - Add safe, sanitized report templates.
 - Improve validation scripts without adding dependencies.
 - Add or refine tasks from `docs/ROADMAP.md`.
+- Improve the pilot launch checklist after real GPT Builder Preview runs.
 
 ## Change Rules
 

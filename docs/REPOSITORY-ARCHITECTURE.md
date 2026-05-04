@@ -40,6 +40,8 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `CONTRIBUTING.md` | Short rules and baseline commands. |
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |
+| `docs/OFFICIAL-DOCS-BASIS.md` | Official OpenAI source notes for Builder, Knowledge, Actions, Data Analysis, and publishing assumptions. |
+| `docs/PILOT-LAUNCH-CHECKLIST.md` | First public GPT Builder pilot checklist and evidence record. |
 | `docs/ROADMAP.md` | Public-safe backlog themes and good-first-issue shape. |
 | `.github/ISSUE_TEMPLATE/` | Structured bug, safety, validation, package, docs, and contribution idea reports. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Required safety and validation checklist. |

@@ -1,6 +1,6 @@
 # User Onboarding
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
 Purpose: Explain how normal users should use the GPT, what to upload, what not to upload, how to request artifacts, and how to interpret statuses.
 
@@ -39,6 +39,10 @@ Do not upload:
 - private logs with tokens;
 - malware for execution;
 - huge generated dependency folders unless they are essential.
+
+## Public Pilot Note
+
+If you are testing the GPT before public release, record which Builder model and capabilities were actually enabled and rerun the pilot launch checklist in the repository. If a capability is unavailable in the current session, mark that part `NOT RUN` or `NOT VERIFIED` rather than guessing.
 
 ## How To Ask For Work
 

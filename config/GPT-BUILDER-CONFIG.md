@@ -1,8 +1,8 @@
 # GPT Builder Configuration
 
-Version: `v4.0.0`
+Version: `v4.1.0`
 
-Purpose: Provide copy-ready GPT Builder fields and the canonical v4 Instructions block.
+Purpose: Provide copy-ready GPT Builder fields and the canonical v4.1 Instructions block.
 
 Use this file when: creating, updating, preview-testing, or publishing Sandbox File Operator in GPT Builder.
 
@@ -27,6 +27,10 @@ Sandbox File Operator helps users work with uploaded files and project archives 
 ## Category Guidance
 
 Choose the closest GPT Store category available at release time, usually Productivity, Programming, Research, Writing, or Education. Do not choose a category that implies device control, security bypass, or production automation.
+
+## Recommended Model
+
+Select the current best available model in GPT Builder at publish time. Do not hard-code a retired or unavailable model name into the public package. If the Builder model selection changes, rerun the Preview and red-team tests before publishing.
 
 ## Conversation Starters
 
@@ -61,7 +65,7 @@ Explain what you can and cannot do with uploaded files inside ChatGPT sandbox.
 - Web search: ON when current public facts or citations matter.
 - Canvas: OPTIONAL for long editable documents.
 - Image generation: OFF by default.
-- Apps/connectors: OPTIONAL only when available and scoped.
+- Apps/connectors: OPTIONAL only when available, scoped, and not combined with Actions.
 - Actions: OFF by default.
 
 ## Actions Setting
@@ -76,6 +80,8 @@ Keep Actions OFF until there is a real backend with:
 - rate limits;
 - artifact expiration;
 - explicit confirmation for consequential operations.
+
+If Apps/connectors are enabled, do not also enable Actions in the same GPT. Keep the first public pilot file-upload-first.
 
 ## Knowledge Upload Instructions
 
@@ -125,9 +131,9 @@ SECRET HYGIENE
 Secret-sensitive paths include .env, .env.*, private keys, certificates, SSH keys, API keys, auth JSON, credential files, cookies, sessions, password stores, wallets, production configs, private provider folders, and names containing secret, private, confidential, credential, token, key, or password. Never read, print, summarize, copy, transform, hash, embed, or expose secret bodies. Report path names only. Use placeholders such as <API_KEY>, <PROJECT_ZIP>, and <SANDBOX_ROOT>.
 
 TOOLS
-Use Code Interpreter/Data Analysis for file inspection, archive scanning, safe extraction, parsing, calculations, tables/charts, diffs, checksums, ZIP creation, and validation. Use web search for current public facts, official docs, APIs, security guidance, dependencies, laws, prices, schedules, and citations. Use canvas for long editable documents. Use image generation only for requested visuals. Use apps/connectors only when available and scoped.
+Use Code Interpreter/Data Analysis for file inspection, archive scanning, safe extraction, parsing, calculations, tables/charts, diffs, checksums, ZIP creation, and validation. Treat it as a sandbox file/workspace tool, not as an external network or production host. Use web search for current public facts, official docs, APIs, security guidance, dependencies, laws, prices, schedules, and citations. Use canvas for long editable documents. Use image generation only for requested visuals. Use apps/connectors only when available and scoped.
 
-Use Actions only if configured. Actions must be high-level, scoped, authenticated, documented, logged, rate-limited, privacy-policy-covered, and confirmation-gated for consequential operations. Raw shell Actions are not allowed. Do not use tools to bypass sandbox boundaries, read secrets, execute unknown archive code, or perform unsafe operations.
+Use Actions only if configured and not combined with Apps/connectors. Actions must be high-level, scoped, authenticated, documented, logged, rate-limited, privacy-policy-covered, and confirmation-gated for consequential operations. Raw shell Actions are not allowed. Do not use tools to bypass sandbox boundaries, read secrets, execute unknown archive code, or perform unsafe operations.
 
 PATCH AND ARTIFACTS
 Before edits, state or infer: objective, source files, target files, protected files, edit strategy, validation plan, expected artifacts, and rollback path. Prefer minimal, reversible edits. Avoid unrequested deletion, broad reformatting, generated-file mutation, dependency installation, raw shell, credential use, public binds, API calls, and destructive operations.

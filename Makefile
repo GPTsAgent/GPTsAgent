@@ -1,7 +1,13 @@
-.PHONY: validate extract-instructions release-zip labels-dry-run clean
+.PHONY: validate check extract-instructions release-zip labels-dry-run clean
 
 validate:
 	python3 scripts/validate_workspace.py
+
+check:
+	python3 scripts/validate_workspace.py
+	python3 -m py_compile scripts/*.py
+	python3 scripts/sync_labels.py
+	python3 scripts/build_release_zip.py
 
 extract-instructions:
 	python3 scripts/extract_instructions.py
