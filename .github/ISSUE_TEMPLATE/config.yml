@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Telegram community chat
+    url: https://t.me/GPTsAgentChat
+    about: Use this for quick sanitized discussion, coordination, and early contributor questions. Do not post secrets.
+  - name: Contributor workflow
+    url: https://github.com/GPTsAgent/GPTsAgent/blob/main/docs/CONTRIBUTOR-WORKFLOW.md
+    about: Read this when you want the fastest path from idea to issue to pull request.
   - name: GPT Builder setup notes
     url: https://github.com/GPTsAgent/GPTsAgent/blob/main/README.md
     about: Use this for cloning, downloading, validating, or installing the GPT Builder package.

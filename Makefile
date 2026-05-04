@@ -1,4 +1,4 @@
-.PHONY: validate extract-instructions release-zip clean
+.PHONY: validate extract-instructions release-zip labels-dry-run clean
 
 validate:
 	python3 scripts/validate_workspace.py
@@ -8,6 +8,9 @@ extract-instructions:
 
 release-zip:
 	python3 scripts/build_release_zip.py
+
+labels-dry-run:
+	python3 scripts/sync_labels.py
 
 clean:
 	rm -rf dist .release

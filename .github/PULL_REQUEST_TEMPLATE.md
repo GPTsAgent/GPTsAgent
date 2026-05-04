@@ -4,6 +4,8 @@
 
 Describe the change and why it is needed.
 
+If this PR came from a Telegram discussion, include the sanitized context or link the GitHub issue that tracks it.
+
 ## Scope
 
 - [ ] Root 20-file Knowledge package
@@ -12,6 +14,7 @@ Describe the change and why it is needed.
 - [ ] ZIP/archive workflow
 - [ ] Artifact or validation contract
 - [ ] GitHub/community automation
+- [ ] Issue labels or templates
 - [ ] Local helper scripts
 
 ## Safety Checklist
@@ -25,8 +28,10 @@ Describe the change and why it is needed.
 
 ## Validation
 
-- [ ] `python3 _codex-session/validate_v4_package.py`
-- [ ] `python3 -m py_compile scripts/github_access.py _codex-session/validate_v4_package.py`
+- [ ] `python3 scripts/validate_workspace.py`
+- [ ] `python3 -m py_compile scripts/*.py`
+- [ ] `python3 scripts/build_release_zip.py`, if packaging changed
+- [ ] `python3 scripts/sync_labels.py`, if labels or issue templates changed
 - [ ] GPT Builder Preview test, if behavior changed
 - [ ] Not run, with reason:
 

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "blocked",
+    "color": "b60205",
+    "description": "Cannot move until an external decision, access, or dependency is resolved."
+  },
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something documented, generated, or validated is not working as intended."
+  },
+  {
+    "name": "community",
+    "color": "5319e7",
+    "description": "Contribution idea, Telegram-to-GitHub handoff, or community coordination."
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6",
+    "description": "GitHub Actions or tooling dependency maintenance."
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "README, docs, profile, examples, or wording changes."
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "Public-safe improvement to behavior, packaging, or contributor workflow."
+  },
+  {
+    "name": "github-actions",
+    "color": "2088ff",
+    "description": "GitHub workflow or automation surface."
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Small, bounded task suitable for a first contribution."
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Maintainers welcome external contribution."
+  },
+  {
+    "name": "instructions",
+    "color": "fbca04",
+    "description": "GPT Builder Instructions or extracted instruction artifacts."
+  },
+  {
+    "name": "not verified",
+    "color": "cfd3d7",
+    "description": "Claim, behavior, or environment result has not been verified."
+  },
+  {
+    "name": "package",
+    "color": "d4c5f9",
+    "description": "The 20-file GPT Builder Knowledge package or release ZIP."
+  },
+  {
+    "name": "question",
+    "color": "d876e3",
+    "description": "Clarification request or setup question."
+  },
+  {
+    "name": "safety",
+    "color": "b60205",
+    "description": "Sandbox honesty, archive safety, secret hygiene, refusal, or injection risk."
+  },
+  {
+    "name": "triage",
+    "color": "ededed",
+    "description": "Needs maintainer classification before implementation."
+  },
+  {
+    "name": "validation",
+    "color": "0e8a16",
+    "description": "Local validator, CI, Preview test, artifact, or release evidence."
+  }
+]

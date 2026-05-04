@@ -17,6 +17,19 @@ It turns a normal Custom GPT into a structured file operator for ChatGPT.com:
 - Artifact generation: reports, diffs, manifests, checksums, updated files, and updated ZIPs.
 - Honest validation labels such as `PASS`, `PARTIAL`, `NOT RUN`, and `NOT VERIFIED`.
 
+## Community
+
+- Public Telegram group: https://t.me/GPTsAgentChat
+- Use Telegram for quick discussion, contributor coordination, and early feedback.
+- Keep questions sanitized and free of secrets or private data.
+- Move concrete changes into GitHub Issues and Pull Requests; use the Contribution Idea issue template when a Telegram idea needs tracking.
+
+## Contributor Lanes
+
+- Good first issues: docs clarity, examples, evaluation prompts, issue templates, and validation improvements.
+- Help wanted: archive-safety examples, public roadmap items, and preview-test coverage.
+- Safety-sensitive changes: sandbox boundaries, refusal behavior, secret hygiene, and Actions guidance need maintainer review.
+
 ## What This Is
 
 - A GPT Builder configuration package.

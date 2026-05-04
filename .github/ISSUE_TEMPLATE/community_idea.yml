@@ -1,0 +1,51 @@
+name: Contribution idea
+description: Turn a public-safe idea, Telegram discussion, or small proposal into tracked work.
+title: "[contrib] "
+labels:
+  - community
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when an idea is ready to move from quick discussion into GitHub tracking.
+
+        If this started in Telegram, summarize only the public-safe context. Do not paste secrets, private repository contents, private customer data, tokens, cookies, sessions, or credential bodies.
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where did this idea come from?
+      placeholder: Telegram discussion, README review, GPT Builder Preview test, or other public context
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Idea summary
+      description: What should improve?
+      placeholder: Describe the concrete improvement in one or two short paragraphs.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What contributor, user, safety, or packaging problem does this solve?
+      placeholder: Explain the practical value and expected outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Suggested scope
+      description: Which files or surfaces may need changes?
+      placeholder: README.md, CONTRIBUTING.md, config/EVALUATION-CHECKLIST.md, scripts/validate_workspace.py, etc.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation or review path
+      description: How should a maintainer or contributor know the change is correct?
+      placeholder: python3 scripts/validate_workspace.py, GPT Builder Preview test, doc review, or NOT VERIFIED with reason.
+    validations:
+      required: true

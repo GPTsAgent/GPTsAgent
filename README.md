@@ -30,8 +30,8 @@ No dependency installation is required for the core checks. Python 3.10+ and Git
 | `instructions/` | The canonical system Instructions block extracted from `config/GPT-BUILDER-CONFIG.md`. |
 | `profile/` | Organization profile README source for `GPTsAgent/.github`. |
 | `scripts/` | Local validation, instruction extraction, and release ZIP helpers. |
-| `docs/` | Contributor workflow, architecture, release, and maintainer documentation. |
-| `.github/` | PR/issue templates and CI for contributions. |
+| `docs/` | Contributor workflow, community playbook, roadmap, architecture, release, and maintainer documentation. |
+| `.github/` | PR/issue templates, label taxonomy, Dependabot, CODEOWNERS placeholder, and CI for contributions. |
 
 ## Published Repositories
 
@@ -43,6 +43,27 @@ GPTsAgent intentionally keeps the public surface small:
 | `GPTsAgent/.github` | Public organization profile and community health files. |
 
 The 20-file configuration and system instructions live inside this repository as `config/` and `instructions/`.
+
+## Community
+
+- Public Telegram group for discussion and coordination: https://t.me/GPTsAgentChat
+- Use Telegram for quick, sanitized discussion, idea triage, and contributor coordination.
+- Use GitHub Issues for tracked bugs, safety reports, and documentable change requests.
+- Use the Contribution Idea issue template when a Telegram discussion should become tracked work.
+- Use Pull Requests for actual changes.
+- Do not post secrets, private keys, cookies, sessions, tokens, or private data in Telegram or GitHub.
+
+## Contributor Quickstart
+
+Pick one small lane:
+
+| Lane | Best files | Validation |
+|---|---|---|
+| Docs clarity | `README.md`, `CONTRIBUTING.md`, `docs/` | `python3 scripts/validate_workspace.py` |
+| Examples | `config/EXAMPLES.md`, `config/PROMPT-LIBRARY.md` | Validator plus doc review |
+| Evaluation | `config/EVALUATION-CHECKLIST.md` | Validator plus Preview note if run |
+| Templates | `.github/ISSUE_TEMPLATE/`, `.github/PULL_REQUEST_TEMPLATE.md` | Validator plus template review |
+| Labels | `.github/labels.json` | `python3 scripts/sync_labels.py` |
 
 ## Contribution Flow
 
@@ -60,6 +81,7 @@ The maintainer reviews the PR, confirms validation, and merges accepted changes 
 python3 scripts/validate_workspace.py
 python3 scripts/extract_instructions.py
 python3 scripts/build_release_zip.py
+python3 scripts/sync_labels.py
 ```
 
 `scripts/validate_workspace.py` checks:
@@ -67,6 +89,8 @@ python3 scripts/build_release_zip.py
 - `config/` contains exactly the expected 20 Markdown files.
 - `instructions/SYSTEM-INSTRUCTIONS.txt` matches the Instructions block in `config/GPT-BUILDER-CONFIG.md`.
 - the profile README exists and names the project correctly.
+- contributor/community surfaces are present and aligned.
+- issue-template labels are defined in `.github/labels.json`.
 - no obvious secret-like token was introduced.
 
 ## GPT Builder Install
