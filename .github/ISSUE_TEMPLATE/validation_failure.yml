@@ -1,0 +1,41 @@
+name: Validation failure
+description: Report a failing package validator, workflow, or GPT Builder Preview test.
+title: "[validation] "
+labels:
+  - validation
+  - triage
+body:
+  - type: dropdown
+    id: failure_surface
+    attributes:
+      label: Failure surface
+      options:
+        - Local validator
+        - GitHub Actions
+        - GPT Builder Preview
+        - Artifact ZIP
+        - Documentation checklist
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or test
+      placeholder: python3 _codex-session/validate_v4_package.py
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      placeholder: Paste sanitized output. Do not include secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: What should have passed or failed?
+    validations:
+      required: true

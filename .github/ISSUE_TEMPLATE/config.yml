@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GPT Builder setup notes
+    url: https://github.com/GPTsAgent/GPTsAgent/blob/main/README.md
+    about: Use this for cloning, downloading, validating, or installing the GPT Builder package.
+  - name: Security and secret handling
+    url: https://github.com/GPTsAgent/GPTsAgent/blob/main/SECURITY.md
+    about: Read before reporting secret-sensitive behavior. Do not post real secrets.

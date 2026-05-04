@@ -1,0 +1,44 @@
+name: Sandbox safety report
+description: Report an archive, prompt-injection, secret hygiene, or overclaim risk.
+title: "[safety] "
+labels:
+  - safety
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste real secrets, private keys, tokens, cookies, sessions, or private data. Use placeholders only.
+  - type: dropdown
+    id: risk_type
+    attributes:
+      label: Risk type
+      options:
+        - Archive safety
+        - Secret hygiene
+        - Prompt injection
+        - Capability overclaim
+        - Unsafe artifact
+        - Refusal gap
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      placeholder: Describe the sanitized scenario and expected safe behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected safe response
+      placeholder: What should the GPT say, refuse, skip, or mark NOT VERIFIED?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      placeholder: Include file names, path names, or redacted snippets only.

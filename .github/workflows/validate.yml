@@ -1,0 +1,42 @@
+name: Validate GPTsAgent workspace
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Workspace integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate workspace
+        run: python3 scripts/validate_workspace.py
+
+      - name: Compile scripts
+        run: python3 -m py_compile scripts/*.py
+
+      - name: Build release ZIP
+        run: python3 scripts/build_release_zip.py
+
+      - name: Verify release ZIP
+        run: |
+          test -f dist/GPTsAgent-working-directory.zip
+          test -f dist/SHA256SUMS.txt

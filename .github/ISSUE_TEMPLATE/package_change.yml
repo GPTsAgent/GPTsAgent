@@ -1,0 +1,46 @@
+name: Package change request
+description: Propose a bounded change to the GPTsAgent configuration package.
+title: "[package] "
+labels:
+  - package
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for changes to the 20-file GPT Builder package, Instructions block, examples, reports, or publishing guidance.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - GPT Builder Instructions
+        - Knowledge file
+        - ZIP safety
+        - Secret hygiene
+        - Artifact contract
+        - Evaluation checklist
+        - Publishing guidance
+        - GitHub automation
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should improve?
+      placeholder: Describe the concrete behavior or document change.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Affected files
+      placeholder: GPT-BUILDER-CONFIG.md, EVALUATION-CHECKLIST.md, etc.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation expectation
+      placeholder: Which Preview test, validator check, or artifact check should prove this?
+    validations:
+      required: true

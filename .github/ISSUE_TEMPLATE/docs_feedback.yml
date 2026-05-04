@@ -1,0 +1,26 @@
+name: Documentation feedback
+description: Report unclear, incomplete, or misleading documentation.
+title: "[docs] "
+labels:
+  - documentation
+  - triage
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File or section
+      placeholder: README.md, GPT-BUILDER-CONFIG.md, profile/README.md
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear?
+      placeholder: Describe the confusing or missing part.
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: Suggested improvement
+      placeholder: Propose safer or clearer wording.

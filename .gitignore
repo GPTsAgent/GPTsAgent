@@ -1,0 +1,17 @@
+.env
+.github-token
+.github-token.*
+!.github-token.example
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+dist/
+.release/
