@@ -1,6 +1,6 @@
 # Skill Catalog
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Define public-safe named workflow skills for GPTsAgent, including the trigger, input, output, and validation shape of each reusable skill.
 

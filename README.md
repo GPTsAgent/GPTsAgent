@@ -4,7 +4,7 @@ Canonical development workspace for GPTsAgent.
 
 GPTsAgent is an open project for building a disciplined GPT Builder wrapper around ChatGPT.com sandbox work. The current flagship package is **Sandbox File Operator**: a Custom GPT configuration that makes uploaded file and ZIP archive work more agent-like while staying honest about sandbox boundaries.
 
-Current package version: `v0.3.0`.
+Current package version: `v0.3.1`.
 
 This repository is a public pilot. It is intended to be cloneable, reviewable, and easy for contributors to improve without confusing it with a private host-level project.
 
@@ -34,7 +34,7 @@ No dependency installation is required for the core checks. Python 3.10+ and Git
 | `instructions/` | The canonical system Instructions block extracted from `config/GPT-BUILDER-CONFIG.md`. |
 | `profile/` | Organization profile README source for `GPTsAgent/.github`. |
 | `scripts/` | Local PR coordination, validation, instruction extraction, and release ZIP helpers. |
-| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, command/session patterns, skill catalog, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md`, `docs/COMMAND-SESSION-PATTERNS.md`, and `docs/SKILL-CATALOG.md`. |
+| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, command/session patterns, skill catalog, GPTs documentation dossiers, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md`, `docs/COMMAND-SESSION-PATTERNS.md`, `docs/SKILL-CATALOG.md`, `docs/GPTS-CURRENT-DOCS-DOSSIER.md`, and `docs/GPTS-PROFESSIONAL-CONTEXT-REVIEW.md`. |
 | `eval/` | Machine-readable Preview and red-team scenario fixtures. |
 | `.github/` | PR/issue templates, label taxonomy, Dependabot, CODEOWNERS placeholder, and CI for contributions. |
 | `AGENTS.md` | Repo-local rules for AI agents and contributor automation. |
@@ -132,12 +132,14 @@ make prepublish-audit
 
 ## GPT Builder Install
 
-1. Copy the contents of `instructions/SYSTEM-INSTRUCTIONS.txt` into GPT Builder Instructions.
-2. Upload exactly the 20 Markdown files from `config/` as Knowledge.
-3. Choose the current available GPT Builder model and re-check it before publishing.
-4. Enable file uploads and Code Interpreter/Data Analysis.
-5. If you enable Apps/connectors, do not enable Actions in the same GPT.
-6. Run the Preview tests in `config/EVALUATION-CHECKLIST.md`, `docs/PREVIEW-TEST-MATRIX.md`, and `docs/PILOT-LAUNCH-CHECKLIST.md`.
+1. Use the `Copy-Ready Builder Field Map` in `config/GPT-BUILDER-CONFIG.md` as the install sheet.
+2. Copy the contents of `instructions/SYSTEM-INSTRUCTIONS.txt` into GPT Builder Instructions.
+3. Upload exactly the 20 Markdown files from `config/` as Knowledge.
+4. Choose the current available GPT Builder model from the live UI and record it.
+5. Enable file uploads and Code Interpreter/Data Analysis.
+6. Keep Apps off for the public GPT Store pilot.
+7. Keep Actions off unless a real backend, OpenAPI schema, authentication model, privacy policy, logging, rate limits, and tests exist.
+8. Run the Preview tests in `config/EVALUATION-CHECKLIST.md`, `docs/PREVIEW-TEST-MATRIX.md`, and `docs/PILOT-LAUNCH-CHECKLIST.md`.
 
 ## Accepting Contributions
 

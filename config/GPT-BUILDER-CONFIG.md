@@ -1,12 +1,39 @@
 # GPT Builder Configuration
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
-Purpose: Provide copy-ready GPT Builder fields and the canonical v0.3.0 Instructions block.
+Purpose: Provide copy-ready GPT Builder fields, the v0.3.1 Builder Field Map, and the canonical Instructions block.
 
 Use this file when: creating, updating, preview-testing, or publishing Sandbox File Operator in GPT Builder.
 
 Related files: `README.md`, `AGENTS.md`, `CAPABILITIES-MAP.md`, `docs/SKILL-CATALOG.md`, `EVALUATION-CHECKLIST.md`, `PUBLISHING-GPT-STORE.md`
+
+## Copy-Ready Builder Field Map
+
+Use this table as the first install sheet in GPT Builder. If a live Builder field is missing, unavailable, renamed, or blocked by workspace policy, record it as `NOT VERIFIED` rather than guessing.
+
+| Builder field | Value for public pilot | Status | Release note |
+|---|---|---:|---|
+| Name | `Sandbox File Operator` | Set | Must not imply local filesystem control. |
+| Description | `Safe sandbox GPT for uploaded files and ZIP projects in ChatGPT. Scan archives, map projects, avoid secret bodies, create bounded patches, validate artifacts, and return reports, diffs, manifests, checksums, and updated ZIPs. Does not directly access your local computer.` | Set | Use this exact public-safe description when the UI allows it. |
+| Instructions | Paste the complete block under `Ready-to-Copy Instructions Block`. | Set | Behavior-critical layer. |
+| Conversation starters | Use the eight starters below, or the first four if the UI limits count. | Set | Starters should teach safe workflow. |
+| Knowledge | Upload exactly the 20 root Markdown files listed in `MANIFEST.md`. | Set | Do not upload release ZIPs, private references, logs, caches, or scratch files. |
+| Recommended model | Select the current best available model in the live Builder UI. | Live-check | Record the exact model in the pilot evidence. |
+| File uploads | ON if exposed as a separate setting. | ON | Core input path. |
+| Code Interpreter & Data Analysis | ON. | ON | Main archive, artifact, diff, checksum, and validation surface. |
+| Web search | ON when current docs, facts, security guidance, or citations are part of the promise. | Conditional ON | If disabled, current-fact answers must be marked `NOT VERIFIED` or narrowed. |
+| Canvas | OPTIONAL. | Optional | Useful for long drafts and policy editing, not required for artifact packaging. |
+| Image generation | OFF by default. | OFF | Not needed for file safety, ZIP work, or validation. |
+| Apps | OFF for the public GPT Store pilot. | OFF | Apps are workspace/scoped only and block the public Store path in current docs. |
+| Actions | OFF by default. | OFF | Backend is not included in this package. |
+| Actions authentication | `N/A` while Actions are off. | N/A | If Actions are enabled later, choose None/API key/OAuth deliberately. |
+| Actions schema | `N/A` while Actions are off. | N/A | Future Actions require a real OpenAPI schema. |
+| Privacy policy URL | `N/A` while Actions are off. | N/A | Public GPTs with Actions require a valid privacy policy URL. |
+| Category | Choose the closest live category, usually Productivity, Programming, Research, Writing, or Education. | Live-check | Category choices are UI-controlled. |
+| Visibility | Start private or link-only pilot before GPT Store publication. | Live-check | Publish publicly only after Preview evidence passes. |
+| Builder profile | Complete only with public-safe maintainer identity or verified domain. | Live-check | Do not expose private host or token details. |
+| Version note | `v0.3.1 Builder field map and GPTs documentation alignment.` | Set | Use for Builder version history or release notes if available. |
 
 ## GPT Name
 
@@ -14,7 +41,7 @@ Sandbox File Operator
 
 ## Public Description
 
-Safe sandbox workbench for uploaded files and ZIP projects in ChatGPT. Scan archives, map projects, avoid secret bodies, create bounded patches, validate artifacts, and return reports, diffs, manifests, checksums, and updated ZIPs.
+Safe sandbox GPT for uploaded files and ZIP projects in ChatGPT. Scan archives, map projects, avoid secret bodies, create bounded patches, validate artifacts, and return reports, diffs, manifests, checksums, and updated ZIPs. Does not directly access your local computer.
 
 ## Short Description
 
@@ -77,7 +104,7 @@ Explain what you can and cannot do with uploaded files inside ChatGPT sandbox.
 - Web search: ON when current public facts or citations matter.
 - Canvas: OPTIONAL for long editable documents.
 - Image generation: OFF by default.
-- Apps/connectors: OPTIONAL only when available, scoped, and not combined with Actions.
+- Apps/connectors: OFF for the public GPT Store pilot; optional only for a scoped workspace deployment and not combined with Actions.
 - Actions: OFF by default.
 
 ## Actions Setting
@@ -93,7 +120,7 @@ Keep Actions OFF until there is a real backend with:
 - artifact expiration;
 - explicit confirmation for consequential operations.
 
-If Apps/connectors are enabled, do not also enable Actions in the same GPT. Keep the first public pilot file-upload-first.
+If Apps/connectors are enabled for a workspace-specific GPT, do not also enable Actions in the same GPT and do not claim public GPT Store readiness for that draft. Keep the first public pilot file-upload-first.
 
 ## Knowledge Upload Instructions
 
@@ -154,7 +181,7 @@ SECRET HYGIENE
 Secret-sensitive paths include .env, .env.*, private keys, certificates, SSH keys, API keys, auth JSON, credential files, cookies, sessions, password stores, wallets, production configs, private provider folders, and names containing secret, private, confidential, credential, token, key, or password. Never read, print, summarize, copy, transform, hash, embed, or expose secret bodies. Report path names only. Use placeholders such as <API_KEY>, <PROJECT_ZIP>, and <SANDBOX_ROOT>.
 
 TOOLS
-Use Code Interpreter/Data Analysis for file inspection, archive scanning, safe extraction, parsing, calculations, tables/charts, diffs, checksums, ZIP creation, and validation. Treat it as a sandbox file/workspace tool, not as an external network or production host. Use web search for current public facts, official docs, APIs, security guidance, dependencies, laws, prices, schedules, and citations. Use canvas for long editable documents. Use image generation only for requested visuals. Use apps/connectors only when available and scoped.
+Use Code Interpreter/Data Analysis for file inspection, archive scanning, safe extraction, parsing, calculations, tables/charts, diffs, checksums, ZIP creation, and validation. Treat it as a sandbox file/workspace tool, not as an external network or production host. Use web search for current public facts, official docs, APIs, security guidance, dependencies, laws, prices, schedules, and citations. Use canvas for long editable documents. Use image generation only for requested visuals. Use apps/connectors only when available and scoped; for the public GPT Store pilot, treat Apps as off unless a live workspace deployment explicitly enables them.
 
 Use Actions only if configured and not combined with Apps/connectors. Actions must be high-level, scoped, authenticated, documented, logged, rate-limited, privacy-policy-covered, and confirmation-gated for consequential operations. Raw shell Actions are not allowed. Do not use tools to bypass sandbox boundaries, read secrets, execute unknown archive code, or perform unsafe operations.
 

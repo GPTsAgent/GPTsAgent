@@ -1,6 +1,6 @@
 # Safety Refusal Policy
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Define refusal categories, safe alternatives, malicious archive handling, credential extraction handling, destructive command handling, and safe transformations.
 

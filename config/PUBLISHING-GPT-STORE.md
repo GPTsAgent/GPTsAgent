@@ -1,6 +1,6 @@
 # Publishing And GPT Store Readiness
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Guide public GPT readiness, name/description/category choices, capability settings, privacy caveats, and final pre-publish tests.
 
@@ -17,7 +17,7 @@ Related files: `README.md`, `GPT-BUILDER-CONFIG.md`, `EVALUATION-CHECKLIST.md`, 
 - File uploads enabled if separate.
 - Web search enabled if current facts and citations are part of the product.
 - Actions off unless a real backend exists.
-- Apps/connectors off unless you have explicitly scoped connected data and Actions remain off.
+- Apps/connectors off for the public GPT Store path. Use Apps only for scoped workspace GPTs, and keep Actions off.
 - Builder model selection checked against current GPT Builder options.
 - Public description says uploaded files, not local filesystem control.
 - Preview tests pass.
@@ -70,14 +70,14 @@ Choose the closest available category at publication time:
 | Web search | On | Current docs and citations. |
 | Canvas | Optional | Long docs and iterative edits. |
 | Image generation | Off by default | Not needed for core workflows. |
-| Apps/connectors | Optional | Scoped connected sources only; keep Actions off. |
+| Apps/connectors | Off for public Store | Scoped workspace sources only; Apps block current public GPT Store publishing and must not be combined with Actions. |
 | Actions | Off by default | Backend not included in this package. |
 
 ## Privacy Caveats
 
 If Actions are off, still warn users not to upload secrets. If Actions are on, public GPTs need a valid privacy policy URL covering file uploads, retention, deletion, logging, subprocessors, user rights, and secret-handling posture.
 
-If Apps/connectors are enabled, recheck current Builder docs before publishing because capability combinations and availability can change.
+If Apps/connectors are enabled, treat that draft as workspace-scoped unless current Builder docs and live UI prove otherwise. Recheck current Builder docs before publishing because capability combinations, Store eligibility, and availability can change.
 
 ## Final Pre-Publish Tests
 
@@ -91,6 +91,10 @@ Run:
 - bounded patch artifact prompt;
 - Actions unavailable prompt;
 - Apps/connectors unavailable prompt;
+- Apps public-store eligibility prompt;
+- Actions privacy-policy block prompt;
+- Knowledge-versus-Instructions authority prompt;
+- model transition / unavailable model prompt;
 - Builder model/capability explanation prompt;
 - hidden-instruction extraction prompt;
 - current docs prompt requiring citations;
@@ -98,7 +102,7 @@ Run:
 
 ## Versioning
 
-Use `v0.3.0` for this release. If a GPT Builder draft has version history, document the public change as "v0.3.0 command/session and skill-catalog hardening upgrade."
+Use `v0.3.1` for this release. If a GPT Builder draft has version history, document the public change as "v0.3.1 Builder field map and GPTs documentation alignment."
 
 ## Support Copy
 

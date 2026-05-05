@@ -1,6 +1,6 @@
 # Boundary And State Contract
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Define the public repository zones, canonical write targets, generated surfaces, release artifacts, and fail-closed placement rules for GPTsAgent.
 

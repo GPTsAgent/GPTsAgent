@@ -48,6 +48,8 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |
 | `docs/OFFICIAL-DOCS-BASIS.md` | Official OpenAI source notes for Builder, Knowledge, Actions, Data Analysis, and publishing assumptions. |
+| `docs/GPTS-CURRENT-DOCS-DOSSIER.md` | Current official OpenAI GPTs documentation dossier for Builder fields, capabilities, Apps, Actions, privacy, and publishing. |
+| `docs/GPTS-PROFESSIONAL-CONTEXT-REVIEW.md` | Professional, academic, security, governance, and enterprise-adoption context for GPTs roadmap and eval design. |
 | `docs/MODEL-SELECTION.md` | Maintainer guidance for Codex-local model preferences versus public ChatGPT Builder evidence. |
 | `docs/PILOT-LAUNCH-CHECKLIST.md` | First public GPT Builder pilot checklist and evidence record. |
 | `docs/PREVIEW-TEST-MATRIX.md` | Manual Preview worksheet tied to machine-readable eval scenarios. |

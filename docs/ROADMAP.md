@@ -1,6 +1,6 @@
 # Public Roadmap
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Give contributors a public-safe roadmap that separates current pilot work from later backend or automation ambitions.
 
@@ -23,6 +23,7 @@ These tasks are suitable for near-term issues and pull requests:
 - Improve contributor docs so first-time contributors can find a bounded task quickly.
 - Distill a public-safe mode catalog and session-map pattern for GPT Builder-style work.
 - Publish a clear skill catalog and prompt-contract layer for repeatable public workflows.
+- Keep the `Copy-Ready Builder Field Map` aligned with the live GPT Builder UI.
 - Keep `instructions/SYSTEM-INSTRUCTIONS.txt` synchronized with `config/GPT-BUILDER-CONFIG.md`.
 - Improve local validation while keeping the project dependency-free.
 - Keep `eval/preview-scenarios.jsonl` aligned with `config/EVALUATION-CHECKLIST.md`.
@@ -30,6 +31,7 @@ These tasks are suitable for near-term issues and pull requests:
 - Keep GitHub issue templates aligned with `.github/labels.json`.
 - Run the first GPT Builder pilot using `docs/PILOT-LAUNCH-CHECKLIST.md`.
 - Keep official OpenAI docs assumptions current in `docs/OFFICIAL-DOCS-BASIS.md`.
+- Keep `docs/GPTS-CURRENT-DOCS-DOSSIER.md` and `docs/GPTS-PROFESSIONAL-CONTEXT-REVIEW.md` current before public release decisions.
 
 ## Next
 
@@ -38,6 +40,7 @@ These tasks need more care or maintainer coordination:
 - Add a machine-readable release manifest for generated ZIP artifacts.
 - Add more archive-safety examples for edge cases such as symlinks, duplicate paths, traversal, and encrypted entries.
 - Add more eval fixtures for archive edge cases and refusal/narrowing behavior.
+- Add sanitized Builder settings evidence templates for live GPT Builder runs.
 - Add localized onboarding snippets after the English source stays stable.
 - Add a small fixture set for validator tests without including private or secret-bearing payloads.
 - Add more reference-distillation evals that prove private sources can improve public patterns without leaking identity or source text.

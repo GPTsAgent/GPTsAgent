@@ -1,6 +1,6 @@
 # Maintainer Operating Constitution
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Define how future AI agents and maintainers should safely edit this Custom GPT configuration package.
 

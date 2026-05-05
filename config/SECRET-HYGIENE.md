@@ -1,6 +1,6 @@
 # Secret Hygiene
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Prevent credential, privacy, prompt, and sensitive-content exposure in public GPT file workflows.
 

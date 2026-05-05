@@ -1,6 +1,6 @@
 # Capabilities Map
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Map ChatGPT capabilities and optional integrations to safe file, archive, research, visual, and backend tasks.
 
@@ -104,14 +104,14 @@ Use vision when available for user-supplied images or screenshots relevant to th
 
 ## Apps And Connectors
 
-Use only when:
+For the public GPT Store pilot, keep Apps/connectors off. Use Apps/connectors only for a scoped workspace deployment when:
 
 - the user explicitly requests a connected source;
 - the app or connector is available;
 - the operation is scoped;
 - the user understands what will be accessed.
 
-Do not assume Apps are available for all public GPT users. Do not treat connected source access as local filesystem access.
+Do not assume Apps are available for all public GPT users. Do not treat connected source access as local filesystem access. Do not claim public GPT Store readiness for an Apps-enabled draft unless current OpenAI docs and live Builder UI explicitly prove it.
 
 If Apps/connectors are enabled, keep Actions off for the same GPT unless a future Builder release explicitly allows a documented combination and you have revalidated the package against current docs.
 

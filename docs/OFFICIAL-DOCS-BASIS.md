@@ -1,12 +1,12 @@
 # Official OpenAI Docs Basis
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Record the official public sources checked when aligning GPTsAgent with current GPT Builder, Knowledge, Actions, Data Analysis, publishing, and LLM application security guidance.
 
 Use this file when: updating Builder fields, package capabilities, public launch criteria, Actions guidance, or validation rules.
 
-Related files: `config/GPT-BUILDER-CONFIG.md`, `config/CAPABILITIES-MAP.md`, `config/PUBLISHING-GPT-STORE.md`, `docs/PILOT-LAUNCH-CHECKLIST.md`
+Related files: `docs/GPTS-CURRENT-DOCS-DOSSIER.md`, `config/GPT-BUILDER-CONFIG.md`, `config/CAPABILITIES-MAP.md`, `config/PUBLISHING-GPT-STORE.md`, `docs/PILOT-LAUNCH-CHECKLIST.md`
 
 ## Sources Checked
 
@@ -25,10 +25,11 @@ Accessed: `2026-05-05`
 
 ## Integration Notes
 
+- `docs/GPTS-CURRENT-DOCS-DOSSIER.md` holds the broader current GPTs documentation map. Use this file for the concise release-source summary and the dossier for field-by-field Builder evidence.
 - Keep behavior-critical rules in GPT Builder Instructions. Knowledge files support retrieval, examples, templates, and evaluation.
 - Re-check the live Builder model menu before public release; do not hard-code a model name that may be retired or unavailable.
 - Keep Actions off by default. If Actions are ever enabled, require backend ownership, OpenAPI schema, authentication, privacy policy, logging, rate limits, and explicit confirmation gates.
-- Keep the public pilot file-upload-first. If Apps/connectors are enabled, do not also enable Actions unless current Builder docs explicitly allow that combination and the package is revalidated.
+- Keep the public pilot file-upload-first. Apps stay off for the public GPT Store path unless current Builder docs and live UI prove eligibility. If Apps/connectors are enabled for a workspace GPT, do not also enable Actions unless current Builder docs explicitly allow that combination and the package is revalidated.
 - Use Data Analysis for sandbox file/archive work and artifact generation. Use web search for current public facts and citations.
 - Treat OpenAI docs as a current release input, not as permanent truth. Re-run this review before each public launch.
 - Treat LLM application security guidance as evaluation input. If a new abuse case is added to `THREAT-MODEL.md`, add or update an eval scenario.

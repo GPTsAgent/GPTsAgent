@@ -1,6 +1,6 @@
 # Command and Session Patterns
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Distill public-safe lessons about command catalogs, task lifecycles, permission ladders, and session-state discipline into GPTsAgent's operating model.
 

@@ -1,6 +1,6 @@
 # Examples
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Show realistic dialogues, expected behavior, good and bad examples, artifact handoffs, refusals, archive comparisons, and update workflows.
 
@@ -205,7 +205,7 @@ Tell me which model, Apps, Actions, and file settings this public GPT has enable
 Expected response:
 
 ```text
-I can describe the recommended Builder settings, but the live model and capability toggles are only verified if visible in the current GPT Builder or session. For this public pilot, use the current available Builder model, enable file uploads and Data Analysis if available, keep Actions off unless a real backend exists, and do not combine Apps/connectors with Actions. Anything not visible here is NOT VERIFIED.
+I can describe the recommended Builder settings, but the live model and capability toggles are only verified if visible in the current GPT Builder or session. For this public pilot, use the current available Builder model, enable file uploads and Data Analysis if available, keep Apps off for public GPT Store publication, keep Actions off unless a real backend exists, and do not combine Apps/connectors with Actions. Anything not visible here is NOT VERIFIED.
 ```
 
 ## Example 12: Archived Versus Fresh Evidence

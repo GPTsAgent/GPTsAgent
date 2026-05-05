@@ -16,7 +16,7 @@ AGENTS = ROOT / "AGENTS.md"
 CONFIG_README = CONFIG / "README.md"
 EVAL_SCENARIOS = ROOT / "eval" / "preview-scenarios.jsonl"
 TELEGRAM_URL = "https://t.me/GPTsAgentChat"
-EXPECTED_VERSION = "v0.3.0"
+EXPECTED_VERSION = "v0.3.1"
 
 EXPECTED_CONFIG_FILES = [
     "ACTIONS-API-BLUEPRINT.md",
@@ -60,6 +60,8 @@ COMMUNITY_FILES = [
     Path("docs/CONTRIBUTOR-WORKFLOW.md"),
     Path("docs/COMMUNITY-PLAYBOOK.md"),
     Path("docs/OFFICIAL-DOCS-BASIS.md"),
+    Path("docs/GPTS-CURRENT-DOCS-DOSSIER.md"),
+    Path("docs/GPTS-PROFESSIONAL-CONTEXT-REVIEW.md"),
     Path("docs/MODEL-SELECTION.md"),
     Path("docs/PILOT-LAUNCH-CHECKLIST.md"),
     Path("docs/PREVIEW-TEST-MATRIX.md"),
@@ -312,7 +314,7 @@ def main() -> int:
         ),
         check(PROFILE.exists(), "profile README exists"),
         check("GPTsAgent" in profile_text and "Sandbox File Operator" in profile_text, "profile README names GPTsAgent and Sandbox File Operator"),
-        check("v0.3.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
+        check("v0.3.1" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
         check(
             "## Static Package Model" in root_readme_text
             and "maintainer" in root_readme_text.lower()
@@ -341,11 +343,16 @@ def main() -> int:
         check("model-selection-not-overclaim" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include model-selection overclaim coverage"),
         check("skill-catalog-honesty" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include skill catalog honesty coverage"),
         check("static-package-update-request" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include static package update boundary coverage"),
+        check("builder-field-map-consistency" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include Builder Field Map coverage"),
+        check("apps-public-store-eligibility" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include Apps public-store eligibility coverage"),
+        check("actions-privacy-policy-block" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include Actions privacy policy coverage"),
+        check("knowledge-instructions-authority" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include Knowledge versus Instructions authority coverage"),
+        check("model-transition-drift" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include model transition drift coverage"),
         check("docs/REFERENCE-DISTILLATION-POLICY.md" in root_readme_text and "REFERENCE_DISTILLATION" in read(CONFIG / "FILE-WORKFLOW.md"), "root docs and workflow cover private-reference distillation"),
         check("docs/MODEL-SELECTION.md" in root_readme_text and "ChatGPT Builder" in model_selection_text and "Codex" in model_selection_text and "NOT VERIFIED" in model_selection_text, "model-selection guidance separates Codex-local preference from public Builder evidence"),
         check("private source material" in reference_policy_text and "Do not" in reference_policy_text, "reference distillation policy defines prohibited private-source handling"),
         check("OWASP" in docs_basis_text and "NIST" in docs_basis_text, "official docs basis includes public security references"),
-        check("docs/OFFICIAL-DOCS-BASIS.md" in config_readme_text and "_codex-session" not in config_readme_text, "config README points to public docs basis instead of private session notes"),
+        check("docs/OFFICIAL-DOCS-BASIS.md" in config_readme_text and "docs/GPTS-CURRENT-DOCS-DOSSIER.md" in config_readme_text and "_codex-session" not in config_readme_text, "config README points to public docs basis instead of private session notes"),
         check(
             "## Static Package Model" in config_readme_text
             and "Users cannot update the 20 Knowledge files" in config_readme_text,
@@ -360,6 +367,7 @@ def main() -> int:
         check("Update your Knowledge files from this chat" in refusal_text and "deployed package is static" in refusal_text, "safety refusal policy covers static package rewrite requests"),
         check("static release snapshot" in pilot_text and "end users do not edit the 20 Knowledge files or system Instructions" in pilot_text, "pilot checklist treats the deployed GPT as a static release snapshot"),
         check("## Recommended Model" in builder_config_text and "not combined with Actions" in builder_config_text, "GPT Builder config includes current model and Apps/Actions caveat"),
+        check("## Copy-Ready Builder Field Map" in builder_config_text and "Privacy policy URL" in builder_config_text and "Actions schema" in builder_config_text, "GPT Builder config includes complete Builder Field Map"),
         check(
             "## Static Package Model" in builder_config_text
             and "not user-editable inside a normal GPT conversation" in builder_config_text,

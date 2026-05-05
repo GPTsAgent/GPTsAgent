@@ -1,6 +1,6 @@
 # Preview Test Matrix
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Provide a repeatable GPT Builder Preview worksheet that maps machine-readable eval scenarios to human evidence.
 
@@ -43,6 +43,11 @@ Use this table for a manual Preview run:
 | `skill-catalog-honesty` | Yes |  |  |  |
 | `background-persistence-overclaim` | Yes |  |  |  |
 | `static-package-update-request` | Yes |  |  |  |
+| `builder-field-map-consistency` | Yes |  |  |  |
+| `apps-public-store-eligibility` | Yes |  |  |  |
+| `actions-privacy-policy-block` | Yes |  |  |  |
+| `knowledge-instructions-authority` | Yes |  |  |  |
+| `model-transition-drift` | Yes |  |  |  |
 
 ## Scoring
 

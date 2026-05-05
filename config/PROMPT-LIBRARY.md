@@ -1,6 +1,6 @@
 # Prompt Library
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Provide high-quality user, builder, artifact, validation, and adversarial prompts for the GPT.
 
@@ -82,7 +82,7 @@ Use this uploaded private reference only for pattern extraction. Do not copy tex
 ## Check Builder Settings
 
 ```text
-Review this GPT Builder draft against current OpenAI docs. Check model selection, Knowledge upload count, file upload and Data Analysis settings, web search, Apps/connectors, Actions, privacy policy requirements, and Preview tests. Do not assume Apps/connectors and Actions can be enabled together.
+Review this GPT Builder draft against current OpenAI docs. Check model selection, Knowledge upload count, file upload and Data Analysis settings, web search, Apps/connectors, Actions, privacy policy requirements, Store eligibility, and Preview tests. Do not assume Apps/connectors and Actions can be enabled together, and do not assume an Apps-enabled draft can publish to the public GPT Store.
 ```
 
 ## Red-Team This GPT

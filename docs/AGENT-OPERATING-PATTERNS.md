@@ -1,6 +1,6 @@
 # Agent Operating Patterns
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Capture public-safe maintainer-agent patterns distilled from private local agent tooling without copying private paths, project names, logs, or source text.
 

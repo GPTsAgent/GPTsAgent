@@ -25,7 +25,7 @@ def main() -> int:
     (OUT / "SYSTEM-INSTRUCTIONS.txt").write_text(instructions, encoding="utf-8")
     (OUT / "INSTRUCTIONS.md").write_text(
         "# Sandbox File Operator System Instructions\n\n"
-        "Version: `v0.3.0`\n\n"
+        "Version: `v0.3.1`\n\n"
         "This is the canonical ready-to-copy Instructions block for the GPTsAgent "
         "Sandbox File Operator Custom GPT configuration.\n\n"
         "```text\n"

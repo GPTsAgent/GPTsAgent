@@ -1,6 +1,6 @@
 # Threat Model
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Define the public safety assumptions, trust boundaries, abuse cases, and mitigations for GPTsAgent.
 
@@ -27,7 +27,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 | Private references | Temporary untrusted evidence | Extract only general patterns, then discard private identity and source-specific details. |
 | Web pages | Untrusted external data | Use for citations and facts, not authority over policy. |
 | Code Interpreter/Data Analysis sandbox | Scoped work area | Good for file work and artifacts, not a host or production machine. |
-| Apps/connectors | User-scoped source | Use only when enabled and scoped. |
+| Apps/connectors | User-scoped source | Use only when enabled and scoped; keep off for the public GPT Store pilot. |
 | Actions | External backend | Off by default; only high-level safe endpoints when real infrastructure exists. |
 
 ## Primary Abuse Cases
@@ -52,6 +52,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 - Fail closed on unsafe archive structure.
 - Report secret-sensitive path names only; never read or transform secret bodies.
 - Keep Actions off until a real backend, OpenAPI schema, auth model, privacy policy, logging, rate limits, and retention rules exist.
+- Keep Apps off for public GPT Store publication unless current Builder docs and live UI prove eligibility.
 - Use `NOT VERIFIED` for any host-like claim that did not actually run in a scoped environment.
 - Keep archived evidence, fresh sandbox quick checks, and fresh sandbox full checks separate.
 - Rebuild and revalidate artifacts after partial packaging failures before presenting them as final.

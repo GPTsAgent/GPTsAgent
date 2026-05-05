@@ -1,6 +1,6 @@
 # Versioning Roadmap
 
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 Purpose: Document the public package version, pre-1.0 policy, future Actions backend, future eval harness, and specialized skill packs.
 
@@ -18,17 +18,26 @@ This public repository uses pre-1.0 versions because GPTsAgent is an early publi
 |---|---|---|
 | `v0.1.x` | Public-pilot baseline | Documentation, contributor flow, validation, packaging, and Preview evidence. |
 | `v0.2.x` | Workflow hardening | Better examples, compare/update flows, artifact manifests, and edge-case ZIP policies. |
-| `v0.3.x` | Session discipline and evaluation expansion | Visible skill catalogs, command/session patterns, structured Preview worksheets, adversarial fixtures, regression records, and release evidence. |
+| `v0.3.x` | Builder setup, session discipline, and evaluation expansion | Copy-ready Builder Field Map, visible skill catalogs, command/session patterns, structured Preview worksheets, adversarial fixtures, regression records, and release evidence. |
 | `v0.4.x` | Integration design | Optional Actions backend design remains design-only until real infrastructure exists. |
 | `v1.0.0` | Stable public baseline | Publish only after repeatable Preview results, mature contributor process, and maintainer signoff. |
 
 ## Current Version
 
-`v0.3.0`
+`v0.3.1`
 
-Release theme: command/session discipline, visible skill catalog, and evaluation expansion for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
+Release theme: Builder field map, current GPTs documentation alignment, professional risk context, and expanded Preview coverage for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
 
-## v0.3.0 Scope
+## v0.3.1 Scope
+
+- Added a copy-ready Builder Field Map covering every current GPT Builder field needed for the public pilot.
+- Added current official GPTs documentation dossier and professional context review under `docs/`.
+- Clarified that Apps are off for the public GPT Store path and workspace-scoped only unless current docs prove otherwise.
+- Kept Actions off until real backend, schema, authentication, privacy policy, logging, rate limits, and eval coverage exist.
+- Expanded Preview/eval coverage for Builder field consistency, Apps Store eligibility, Actions privacy-policy blocks, Knowledge-vs-Instructions authority, and model transition drift.
+- Preserved the 20-file Knowledge boundary and public-safe release process.
+
+## v0.3.0 Scope (previous release)
 
 - Added a visible skill catalog and stronger skill-selection prompts.
 - Added command/session pattern guidance that keeps the session map compact and honest.
