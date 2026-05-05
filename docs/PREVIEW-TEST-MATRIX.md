@@ -39,6 +39,8 @@ Use this table for a manual Preview run:
 | `artifact-recovery-partial-output` | Yes |  |  |  |
 | `reference-distillation-private` | Yes |  |  |  |
 | `model-selection-not-overclaim` | Yes |  |  |  |
+| `session-map-honesty` | Yes |  |  |  |
+| `background-persistence-overclaim` | Yes |  |  |  |
 | `static-package-update-request` | Yes |  |  |  |
 
 ## Scoring

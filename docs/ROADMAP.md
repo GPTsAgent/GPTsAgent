@@ -21,6 +21,7 @@ These tasks are suitable for near-term issues and pull requests:
 - Improve examples in `config/EXAMPLES.md` with realistic, sanitized user dialogues.
 - Add Preview and red-team cases to `config/EVALUATION-CHECKLIST.md`.
 - Improve contributor docs so first-time contributors can find a bounded task quickly.
+- Distill a public-safe mode catalog and session-map pattern for GPT Builder-style work.
 - Keep `instructions/SYSTEM-INSTRUCTIONS.txt` synchronized with `config/GPT-BUILDER-CONFIG.md`.
 - Improve local validation while keeping the project dependency-free.
 - Keep `eval/preview-scenarios.jsonl` aligned with `config/EVALUATION-CHECKLIST.md`.

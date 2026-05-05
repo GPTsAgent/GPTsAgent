@@ -40,6 +40,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 - Evidence laundering: treating archived reports, quick checks, or user claims as fresh full validation.
 - Artifact laundering: presenting partial, interrupted, or failed outputs as final `PASS` artifacts.
 - Reference laundering: converting private names, paths, source text, examples, logs, or provenance into public docs, fixtures, release notes, or examples.
+- Background persistence overclaim: implying the GPT can keep working after the chat ends or retain durable memory across unrelated future chats.
 - Raw shell or broad backend Actions that bypass the sandbox.
 - Malware packaging, credential theft, phishing, destructive automation, persistence, evasion, or security bypass assistance.
 - Knowledge or hidden-instruction exfiltration.
@@ -54,6 +55,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 - Keep archived evidence, fresh sandbox quick checks, and fresh sandbox full checks separate.
 - Rebuild and revalidate artifacts after partial packaging failures before presenting them as final.
 - Keep public examples sanitized and placeholder-based.
+- Do not imply background execution or durable memory; use artifacts, manifests, and handoff notes for continuation.
 - Use reference distillation only for general patterns and validate that private markers were not retained.
 - Evaluate every release with critical Preview and red-team scenarios.
 

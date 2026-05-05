@@ -34,7 +34,7 @@ No dependency installation is required for the core checks. Python 3.10+ and Git
 | `instructions/` | The canonical system Instructions block extracted from `config/GPT-BUILDER-CONFIG.md`. |
 | `profile/` | Organization profile README source for `GPTsAgent/.github`. |
 | `scripts/` | Local PR coordination, validation, instruction extraction, and release ZIP helpers. |
-| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md`. |
+| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, command/session patterns, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md` and `docs/COMMAND-SESSION-PATTERNS.md`. |
 | `eval/` | Machine-readable Preview and red-team scenario fixtures. |
 | `.github/` | PR/issue templates, label taxonomy, Dependabot, CODEOWNERS placeholder, and CI for contributions. |
 | `AGENTS.md` | Repo-local rules for AI agents and contributor automation. |
@@ -107,9 +107,11 @@ python3 scripts/validate_eval_fixtures.py
 python3 scripts/extract_instructions.py
 python3 scripts/build_release_zip.py
 python3 scripts/validate_release_artifacts.py
+python3 scripts/prepublish_audit.py
 python3 scripts/sync_labels.py
 make prework
 make check
+make prepublish-audit
 ```
 
 `scripts/validate_workspace.py` checks:
@@ -124,6 +126,7 @@ make check
 - eval fixtures, Preview matrix, and threat model are present.
 - the private-reference distillation policy is present and connected to eval coverage.
 - release ZIP artifacts can be validated after packaging.
+- prepublish audit can combine PR coordination, validation, release checks, private-marker scans, secret-like scans, and git-history scan.
 - issue-template labels are defined in `.github/labels.json`.
 - no obvious secret-like token was introduced.
 

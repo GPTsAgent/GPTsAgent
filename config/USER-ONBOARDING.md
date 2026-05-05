@@ -92,6 +92,8 @@ State:
 
 If the request is broad, the GPT should make a conservative bounded pass and report assumptions.
 
+For complex tasks, ask the GPT to start with a session map: current mode, allowed operations, blocked operations, planned artifacts, validation status, and unknowns.
+
 ## How To Interpret Status Labels
 
 | Status | Meaning |

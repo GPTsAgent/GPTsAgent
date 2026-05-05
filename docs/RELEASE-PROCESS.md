@@ -12,6 +12,7 @@ python3 scripts/validate_eval_fixtures.py
 python3 scripts/sync_labels.py
 python3 scripts/build_release_zip.py
 python3 scripts/validate_release_artifacts.py
+python3 scripts/prepublish_audit.py
 ```
 
 Shortcut:
@@ -27,6 +28,7 @@ Expected result:
 - `scripts/check_open_prs.py` reports no overlapping open PRs for the release files.
 - `scripts/sync_labels.py` returns a dry-run label report without errors.
 - `scripts/validate_release_artifacts.py` verifies the release ZIP, checksum, wrapper root, and release manifest.
+- `scripts/prepublish_audit.py` returns `Status: PASS` before a maintainer pushes or publishes a release.
 - `docs/BOUNDARY-AND-STATE-CONTRACT.md` is current and reflected in contributor workflow and release validation.
 - `docs/OFFICIAL-DOCS-BASIS.md` and `docs/PILOT-LAUNCH-CHECKLIST.md` are current if Builder behavior or public launch claims changed.
 - `docs/REFERENCE-DISTILLATION-POLICY.md` is current and the private-marker scan passes if private reference material influenced the package.
@@ -53,6 +55,7 @@ Record:
 - validation output;
 - ZIP SHA256;
 - release manifest;
+- prepublish audit output;
 - label sync result;
 - pilot launch checklist result if Builder settings changed;
 - GPT Builder Preview tests that ran;

@@ -30,6 +30,7 @@ python3 scripts/validate_workspace.py
 python3 scripts/validate_eval_fixtures.py
 python3 scripts/build_release_zip.py
 python3 scripts/validate_release_artifacts.py
+python3 scripts/prepublish_audit.py
 python3 scripts/sync_labels.py
 ```
 

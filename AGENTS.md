@@ -4,7 +4,7 @@ Purpose: Repo-local operating guide for AI coding agents and human contributors 
 
 Use this file when: an AI agent, maintainer, or contributor is about to inspect, edit, validate, package, or publish this repository.
 
-Related files: `README.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/MAINTAINER-REVIEW.md`, `scripts/check_open_prs.py`
+Related files: `README.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/COMMAND-SESSION-PATTERNS.md`, `docs/MAINTAINER-REVIEW.md`, `scripts/check_open_prs.py`
 
 ## Project Boundary
 
@@ -52,9 +52,10 @@ For normal repository work, read:
 1. `README.md`
 2. `CONTRIBUTING.md`
 3. `docs/AGENT-OPERATING-PATTERNS.md`
-4. `docs/BOUNDARY-AND-STATE-CONTRACT.md`
-5. `docs/CONTRIBUTOR-WORKFLOW.md`
-6. `docs/REPOSITORY-ARCHITECTURE.md`
+4. `docs/COMMAND-SESSION-PATTERNS.md`
+5. `docs/BOUNDARY-AND-STATE-CONTRACT.md`
+6. `docs/CONTRIBUTOR-WORKFLOW.md`
+7. `docs/REPOSITORY-ARCHITECTURE.md`
 7. the specific `config/`, `docs/`, `scripts/`, `instructions/`, or `.github/` files you will touch
 
 For safety-sensitive behavior, also read:
@@ -74,6 +75,7 @@ python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
 python3 -m py_compile scripts/*.py
 python3 scripts/build_release_zip.py
+python3 scripts/prepublish_audit.py
 ```
 
 If labels or issue templates changed, also run:

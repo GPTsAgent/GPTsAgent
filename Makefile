@@ -1,4 +1,4 @@
-.PHONY: prework open-prs validate check extract-instructions release-zip release-artifacts labels-dry-run clean
+.PHONY: prework open-prs validate check prepublish-audit extract-instructions release-zip release-artifacts labels-dry-run clean
 
 prework:
 	git status --short --branch
@@ -17,6 +17,9 @@ check:
 	python3 scripts/sync_labels.py
 	python3 scripts/build_release_zip.py
 	python3 scripts/validate_release_artifacts.py
+
+prepublish-audit:
+	python3 scripts/prepublish_audit.py
 
 eval-fixtures:
 	python3 scripts/validate_eval_fixtures.py

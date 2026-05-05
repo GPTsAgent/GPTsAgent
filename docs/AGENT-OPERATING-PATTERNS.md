@@ -6,7 +6,7 @@ Purpose: Capture public-safe maintainer-agent patterns distilled from private lo
 
 Use this file when: improving GPTsAgent contributor workflows, AI-agent maintenance rules, review processes, or validation discipline.
 
-Related files: `AGENTS.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/MAINTAINER-REVIEW.md`
+Related files: `AGENTS.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/MAINTAINER-REVIEW.md`, `docs/COMMAND-SESSION-PATTERNS.md`
 
 ## Core Rule
 
@@ -18,6 +18,7 @@ Private maintainer tooling may inspire GPTsAgent's public process, but only gene
 |---|---|
 | Layered read order | Start with repo `AGENTS.md`, then `README.md`, contributor docs, and only the files relevant to the change. |
 | Short session card | Keep a compact task brief: scope, source, protected surfaces, intended outputs, validation, and unknowns. |
+| Mode catalog and session map | Surface the least-powerful mode, allowed operations, blocked operations, artifacts, and unknowns before broad work starts. |
 | Safe-surface map | Separate human-readable docs from runtime state, caches, logs, credentials, generated outputs, and release artifacts. |
 | Boundary contract | Define which repository zones are canonical write targets and fail closed when placement is unclear. |
 | Curated skills | Prefer a small list of named workflows over a dump of every possible agent behavior. |

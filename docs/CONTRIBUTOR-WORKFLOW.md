@@ -41,6 +41,7 @@ Then:
 | Safety or validation gap | Open a GitHub Issue first, then patch it. |
 | Private reference input | Follow `docs/REFERENCE-DISTILLATION-POLICY.md`; do not paste the reference or source identity into public issues. |
 | AI-agent workflow change | Check `docs/AGENT-OPERATING-PATTERNS.md` and keep the workflow bounded, validated, and public-safe. |
+| Mode or session-state change | Check `docs/COMMAND-SESSION-PATTERNS.md` and add Preview coverage when behavior changes. |
 | Unclear scope | Ask in Telegram, then write the narrowest issue possible. |
 | GPT Builder or launch change | Check `docs/OFFICIAL-DOCS-BASIS.md` and update `docs/PILOT-LAUNCH-CHECKLIST.md` if needed. |
 
@@ -54,6 +55,7 @@ For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 - Improve the Preview worksheet in `docs/PREVIEW-TEST-MATRIX.md`.
 - Clarify sandbox boundary wording.
 - Improve contributor docs.
+- Clarify mode catalog, session map, or permission-boundary wording in `docs/COMMAND-SESSION-PATTERNS.md`.
 - Add safe, sanitized report templates.
 - Improve validation scripts without adding dependencies.
 - Add or refine tasks from `docs/ROADMAP.md`.
@@ -93,6 +95,7 @@ python3 scripts/validate_eval_fixtures.py
 python3 -m py_compile scripts/*.py
 python3 scripts/build_release_zip.py
 python3 scripts/validate_release_artifacts.py
+python3 scripts/prepublish_audit.py
 ```
 
 If the PR changes labels or issue templates, also run:

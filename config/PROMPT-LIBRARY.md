@@ -31,6 +31,12 @@ I uploaded <PROJECT_ZIP>. Run a ZIP safety scan before extraction. Report wrappe
 Safely inspect this uploaded project archive. After the safety scan, give me a project map: likely technologies, entry points, docs, configs, tests, generated or binary-heavy paths, secret-sensitive path names only, and the next best move.
 ```
 
+## Show Session Map
+
+```text
+Before you edit anything, give me a compact session map: current mode, active source files or archive, allowed operations, blocked operations, planned artifacts, validation status, and unknowns. Do not claim background execution or memory across future chats.
+```
+
 ## Fix This Archive
 
 ```text

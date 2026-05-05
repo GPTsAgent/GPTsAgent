@@ -42,6 +42,7 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `CONTRIBUTING.md` | Short rules and baseline commands. |
 | `AGENTS.md` | AI-agent preflight, ownership, validation, and safety rules. |
 | `docs/AGENT-OPERATING-PATTERNS.md` | Public-safe patterns for AI-assisted maintainer work, skill contracts, and private-reference intake. |
+| `docs/COMMAND-SESSION-PATTERNS.md` | Public-safe distillation of mode catalogs, session maps, task states, and permission ladders. |
 | `docs/BOUNDARY-AND-STATE-CONTRACT.md` | Repository zone contract, canonical write targets, generated surfaces, and release state rules. |
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |
@@ -56,6 +57,7 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `.github/PULL_REQUEST_TEMPLATE.md` | Required safety and validation checklist. |
 | `.github/labels.json` | Desired public issue label set. |
 | `scripts/check_open_prs.py` | Read-only GitHub PR coordination check. |
+| `scripts/prepublish_audit.py` | Maintainer prepublish audit combining PR coordination, validators, release artifact checks, private-marker scans, secret-like scans, and git-history scan. |
 | `scripts/validate_eval_fixtures.py` | Dependency-free validator for `eval/preview-scenarios.jsonl`. |
 | `scripts/validate_release_artifacts.py` | Dependency-free validator for release ZIP, checksum, and release manifest. |
 

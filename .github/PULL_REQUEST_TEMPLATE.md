@@ -35,6 +35,7 @@ If this PR came from a Telegram discussion, include the sanitized context or lin
 - [ ] `python3 -m py_compile scripts/*.py`
 - [ ] `python3 scripts/build_release_zip.py`, if packaging changed
 - [ ] `python3 scripts/validate_release_artifacts.py`, if packaging changed
+- [ ] `python3 scripts/prepublish_audit.py`, before maintainer publication
 - [ ] `python3 scripts/sync_labels.py`, if labels or issue templates changed
 - [ ] GPT Builder Preview test, if behavior changed
 - [ ] Not run, with reason:
