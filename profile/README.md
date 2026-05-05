@@ -6,7 +6,9 @@ GPTsAgent builds public-ready Custom GPT configuration packs that make ChatGPT m
 
 ## Current Focus
 
-**Sandbox File Operator** is the flagship configuration pack. Current package version: `v0.1.0`.
+**Sandbox File Operator** is the flagship configuration pack. Current package version: `v0.2.0`.
+
+The deployed GPT is a static Builder package for normal users: maintainers/admins publish the Instructions and 20 Knowledge files as reviewed release assets, and users work through prompts, uploads, sandbox artifacts, and enabled scoped capabilities.
 
 It turns a normal Custom GPT into a structured file operator for ChatGPT.com:
 
@@ -76,4 +78,4 @@ https://github.com/GPTsAgent/GPTsAgent/archive/refs/heads/main.zip
 
 ## Status
 
-GPTsAgent is in early public pilot packaging around the Sandbox File Operator v0.1 configuration. The next milestone is a recorded GPT Builder Preview run using the pilot launch checklist.
+GPTsAgent is in early public pilot packaging around the Sandbox File Operator v0.2 configuration. The next milestone is a recorded GPT Builder Preview run using the pilot launch checklist.

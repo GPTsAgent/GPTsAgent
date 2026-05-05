@@ -51,9 +51,11 @@ For normal repository work, read:
 
 1. `README.md`
 2. `CONTRIBUTING.md`
-3. `docs/CONTRIBUTOR-WORKFLOW.md`
-4. `docs/REPOSITORY-ARCHITECTURE.md`
-5. the specific `config/`, `docs/`, `scripts/`, `instructions/`, or `.github/` files you will touch
+3. `docs/AGENT-OPERATING-PATTERNS.md`
+4. `docs/BOUNDARY-AND-STATE-CONTRACT.md`
+5. `docs/CONTRIBUTOR-WORKFLOW.md`
+6. `docs/REPOSITORY-ARCHITECTURE.md`
+7. the specific `config/`, `docs/`, `scripts/`, `instructions/`, or `.github/` files you will touch
 
 For safety-sensitive behavior, also read:
 

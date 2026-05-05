@@ -1,6 +1,6 @@
 # Versioning Roadmap
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Document the public package version, pre-1.0 policy, future Actions backend, future eval harness, and specialized skill packs.
 
@@ -12,7 +12,7 @@ Related files: `README.md`, `MANIFEST.md`, `PUBLISHING-GPT-STORE.md`, `EVALUATIO
 
 Use semantic-style versions for the configuration package.
 
-This public repository starts at `v0.1.0` because GPTsAgent is an early public pilot that should receive many reviewed commits before a stable `v1.0.0` promise. Pre-1.0 versions may still change wording, templates, and validation expectations, but every change should preserve sandbox honesty, archive safety, secret hygiene, and the 20-file Knowledge boundary.
+This public repository uses pre-1.0 versions because GPTsAgent is an early public pilot that should receive many reviewed commits before a stable `v1.0.0` promise. Pre-1.0 versions may still change wording, templates, and validation expectations, but every change should preserve sandbox honesty, archive safety, secret hygiene, and the 20-file Knowledge boundary.
 
 | Range | Meaning | Change expectation |
 |---|---|---|
@@ -24,27 +24,28 @@ This public repository starts at `v0.1.0` because GPTsAgent is an early public p
 
 ## Current Version
 
-`v0.1.0`
+`v0.2.0`
 
 Release theme: public-pilot hardening for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
 
-## v0.1.0 Scope
+## v0.2.0 Scope
 
-- Public pilot status made explicit in repository docs.
-- Official OpenAI docs basis moved into public `docs/`.
-- Builder model selection guidance added without hard-coding model names.
-- Apps/connectors and Actions caveat added across setup, publishing, and capability docs.
-- Pilot launch checklist added for first deployment and Preview evidence.
-- Workspace validator strengthened for version consistency, public docs, and private-path hygiene.
-- Contributor workflow clarified for open-source review, PR coordination, and AI-agent-assisted edits.
+- Machine-readable Preview and red-team scenarios added under `eval/`.
+- Dependency-free eval fixture validation added.
+- Public Preview test matrix added for manual GPT Builder evidence.
+- Threat model added for trust boundaries, abuse cases, and mitigations.
+- Private-reference distillation policy added so non-public material can inform public patterns without leaking identity or source text.
+- Release ZIP validation added for archive integrity, checksum, wrapper root, manifest, and required public surfaces.
+- Release and contributor workflows updated so eval evidence is part of normal work.
+- Workspace validator strengthened for eval, threat model, private-marker scans, release artifacts, and public docs presence.
 
 ## Near-Term Public Work
 
 - Keep `instructions/SYSTEM-INSTRUCTIONS.txt` synchronized with `config/GPT-BUILDER-CONFIG.md`.
 - Expand `config/EXAMPLES.md` with sanitized realistic dialogues and artifact handoffs.
 - Add more Preview and red-team cases to `config/EVALUATION-CHECKLIST.md`.
-- Add a structured Preview test worksheet under `docs/` without adding runtime dependencies.
-- Improve release ZIP manifesting and checksum evidence.
+- Fill the structured Preview test worksheet under `docs/` after real GPT Builder runs.
+- Add more artifact-recovery and reference-distillation scenarios.
 - Keep contributor docs aligned with `AGENTS.md`, open PR checks, and maintainer review.
 
 ## Future Actions Backend

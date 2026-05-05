@@ -1,6 +1,6 @@
 # Safety Refusal Policy
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Define refusal categories, safe alternatives, malicious archive handling, credential extraction handling, destructive command handling, and safe transformations.
 
@@ -42,6 +42,7 @@ Refuse the unsafe portion briefly, explain the boundary, and offer a safe altern
 | "Bypass this access control." | Defensive configuration review and documentation. |
 | "Access my local folder." | Ask for upload or scoped connector. |
 | "Expose a shell Action." | High-level scoped endpoint design. |
+| "Update your Knowledge files from this chat." | Explain that the deployed package is static and requires a maintainer/admin repository update plus reviewed release. |
 
 ## Standard Refusal
 

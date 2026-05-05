@@ -1,6 +1,6 @@
 # Capabilities Map
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Map ChatGPT capabilities and optional integrations to safe file, archive, research, visual, and backend tasks.
 

@@ -13,6 +13,7 @@ It contains:
 - `profile/`: organization profile source.
 - `scripts/`: PR coordination, validation, and packaging tools.
 - `docs/`: contributor and maintainer guidance.
+- `eval/`: machine-readable Preview and red-team scenario fixtures.
 - `.github/labels.json`: source-of-truth label taxonomy for issue templates and triage.
 - `AGENTS.md`: repo-local operating rules for AI agents and contributor automation.
 
@@ -40,16 +41,26 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 |---|---|
 | `CONTRIBUTING.md` | Short rules and baseline commands. |
 | `AGENTS.md` | AI-agent preflight, ownership, validation, and safety rules. |
+| `docs/AGENT-OPERATING-PATTERNS.md` | Public-safe patterns for AI-assisted maintainer work, skill contracts, and private-reference intake. |
+| `docs/BOUNDARY-AND-STATE-CONTRACT.md` | Repository zone contract, canonical write targets, generated surfaces, and release state rules. |
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |
 | `docs/OFFICIAL-DOCS-BASIS.md` | Official OpenAI source notes for Builder, Knowledge, Actions, Data Analysis, and publishing assumptions. |
+| `docs/MODEL-SELECTION.md` | Maintainer guidance for Codex-local model preferences versus public ChatGPT Builder evidence. |
 | `docs/PILOT-LAUNCH-CHECKLIST.md` | First public GPT Builder pilot checklist and evidence record. |
+| `docs/PREVIEW-TEST-MATRIX.md` | Manual Preview worksheet tied to machine-readable eval scenarios. |
+| `docs/REFERENCE-DISTILLATION-POLICY.md` | Rules for learning from private references without copying, naming, or preserving private source material. |
+| `docs/THREAT-MODEL.md` | Safety assumptions, trust boundaries, abuse cases, and mitigations. |
 | `docs/ROADMAP.md` | Public-safe backlog themes and good-first-issue shape. |
 | `.github/ISSUE_TEMPLATE/` | Structured bug, safety, validation, package, docs, and contribution idea reports. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Required safety and validation checklist. |
 | `.github/labels.json` | Desired public issue label set. |
 | `scripts/check_open_prs.py` | Read-only GitHub PR coordination check. |
+| `scripts/validate_eval_fixtures.py` | Dependency-free validator for `eval/preview-scenarios.jsonl`. |
+| `scripts/validate_release_artifacts.py` | Dependency-free validator for release ZIP, checksum, and release manifest. |
 
 ## Invariant
 
 The `config/` directory must remain a clean 20-file Knowledge package. Tooling, profile files, contributor docs, and release machinery must stay outside `config/`.
+
+Private reference material must also stay outside `config/`, `eval/`, release artifacts, examples, and public issue/PR text. Only rewritten public-safe patterns may enter the repository.

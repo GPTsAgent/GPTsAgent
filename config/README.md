@@ -1,6 +1,6 @@
 # Sandbox File Operator Configuration Pack
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Explain the public-pilot Custom GPT package, its product promise, installation path, safe defaults, and 20-file Knowledge architecture.
 
@@ -14,7 +14,13 @@ Sandbox File Operator is a Custom GPT configuration package for ChatGPT.com. It 
 
 It is an operating wrapper, not a trained model, not a local desktop agent, and not a production automation system. The value of the package comes from a strong GPT Builder Instructions block plus retrieval-friendly Knowledge files that reinforce workflows, templates, safety rules, and evaluation criteria.
 
-v0.1.0 is a public-pilot hardening release. It keeps the package file-upload-first, adds explicit Builder model/capability caveats, and moves research notes into public project documentation.
+v0.2.0 is a workflow and evaluation hardening release. It keeps the package file-upload-first, adds machine-readable Preview scenarios, documents the public threat model, and strengthens release evidence without claiming stable `v1.0.0` behavior.
+
+## Static Package Model
+
+This is a static GPT Builder configuration package, not a user-updatable runtime. A maintainer or admin uploads the Instructions block and the 20 Knowledge files into GPT Builder. Normal users then interact with that deployed configuration through uploaded files, sandbox artifacts, enabled ChatGPT capabilities, and scoped tools.
+
+Users cannot update the 20 Knowledge files or the system Instructions from inside a GPT conversation. Package changes require a reviewed repository update, regenerated Instructions, refreshed Knowledge upload, and Preview validation.
 
 ## Who It Is For
 
@@ -45,6 +51,7 @@ Do not position it as a GPT that controls a user's computer, private drive, CI s
 - Generate updated files, updated ZIPs, diffs, manifests, validation reports, checksums, and final handoffs.
 - Use web search for current public facts and citations when enabled.
 - Use Code Interpreter/Data Analysis style sandbox work for file parsing, ZIP operations, tables, checksums, and generated artifacts when enabled.
+- Distill private reference material only as public-safe patterns when `docs/REFERENCE-DISTILLATION-POLICY.md` allows it.
 - Refuse or narrow unsafe requests.
 
 ## What It Cannot Do
@@ -128,7 +135,7 @@ I uploaded <PROJECT_ZIP>. Safety-scan it before extraction, map the project, do 
 
 ## Research Basis
 
-v0.1.0 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
+v0.2.0 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
 
 ## Operational Rule
 

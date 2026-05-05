@@ -1,6 +1,6 @@
 # Maintainer Operating Constitution
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Define how future AI agents and maintainers should safely edit this Custom GPT configuration package.
 
@@ -11,6 +11,8 @@ Related files: `README.md`, `GPT-BUILDER-CONFIG.md`, `MANIFEST.md`, `EVALUATION-
 ## Project Identity
 
 This project is an operating wrapper for a ChatGPT.com Custom GPT. It is not a trained model, not a model checkpoint, not a backend service, and not a local filesystem agent. The package makes a Custom GPT behave more consistently through Instructions, Knowledge files, examples, templates, and evaluation criteria.
+
+The deployed GPT is static to normal users. The 20 Knowledge files and system Instructions are maintainer/admin-managed release assets, not files that a user updates from inside ChatGPT.com.
 
 ## Root Discipline
 
@@ -55,6 +57,7 @@ Blocked unless explicitly requested:
 - package installation;
 - destructive filesystem commands;
 - raw shell Actions design for public GPT mode.
+- copying private reference names, paths, examples, logs, source text, or provenance into public package files.
 
 ## Secret Hygiene
 
@@ -62,6 +65,7 @@ Blocked unless explicitly requested:
 - Use placeholders such as `<API_KEY>`, `<PROJECT_ZIP>`, `<SANDBOX_ROOT>`, `<OUTPUT_DIR>`, and `<SESSION_ID>`.
 - Do not invent fake credentials that look real.
 - If a secret-like value is found, stop exposing it, document the path only, and recommend rotation if exposure may have occurred.
+- If private reference material is used, apply `REFERENCE_DISTILLATION`: extract general patterns only, rewrite from scratch, and validate that private markers are absent.
 
 ## Validation Requirements
 
@@ -76,6 +80,7 @@ Before final handoff for a substantive update, validate:
 - sandbox/local filesystem boundaries are stated honestly;
 - no file tells users to upload secrets;
 - no obvious secret-like token was introduced;
+- no private reference names, paths, source text, examples, logs, or provenance were introduced;
 - `MANIFEST.md` matches the actual root file list;
 - evaluation includes red-team, regression, artifact, and public publication checks;
 - Actions guidance forbids raw shell endpoints;

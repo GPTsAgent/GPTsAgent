@@ -1,6 +1,6 @@
 # Artifact Contract
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Define artifact types, required metadata, validation statuses, integrity checks, and handoff standards.
 
@@ -22,6 +22,9 @@ Related files: `FILE-WORKFLOW.md`, `REPORT-TEMPLATES.md`, `MANIFEST.md`, `EVALUA
 | Change manifest | Machine-readable or structured summary of added, modified, removed, unchanged files. |
 | Validation report | Checks run, status labels, evidence, limitations. |
 | Checksum | SHA256 for major downloadable artifacts when possible. |
+| Release manifest | Machine-readable package version, archive name, wrapper root, file count, checksum, and included file list. |
+| Recovery report | Explanation of discarded partial artifacts, rebuilt outputs, and remaining limitations after a packaging or validation issue. |
+| Reference distillation report | Pattern-only summary proving private material was not copied, named, or retained. |
 | Final handoff | Human-readable closeout with next best move. |
 
 ## Required Metadata
@@ -41,6 +44,9 @@ Major artifact handoffs should include:
 - checksum for major ZIPs;
 - validation status;
 - limitations.
+- private-reference boundary and marker-scan result when private material influenced the work.
+
+Release artifacts should also include `dist/RELEASE-MANIFEST.json` when the repository tooling builds `dist/GPTsAgent-working-directory.zip`.
 
 ## Status Labels
 
@@ -68,6 +74,8 @@ Before returning an updated ZIP, verify when possible:
 - validation report exists;
 - checksum exists;
 - changed text contains no obvious secret-like material.
+
+For repository release ZIPs, also verify `dist/RELEASE-MANIFEST.json` and `dist/SHA256SUMS.txt`.
 
 ## Manifest Contract
 
@@ -97,6 +105,28 @@ A manifest should include:
 - Mention binary changes in the manifest.
 - Preserve line endings where practical.
 - Report if no diff could be generated.
+
+## Artifact Recovery
+
+If artifact creation, copying, validation, or packaging partially fails:
+
+- do not present partial artifacts as `PASS`;
+- discard or quarantine partial outputs when possible;
+- rebuild from the original readable uploaded source or validated working copy;
+- rerun the smallest deterministic integrity check;
+- report which artifacts were discarded, rebuilt, validated, or left `PARTIAL`;
+- mark blocked outputs `FAILED`, `NOT RUN`, `NOT VERIFIED`, or `TIMEOUT` as appropriate.
+
+If a full diff is too large or slow, generate a selected-file diff and explicitly mark the full diff `PARTIAL` or `NOT RUN`.
+
+## Atomic Publish
+
+For updated ZIP or release bundles, treat publication as atomic:
+
+1. Build into a candidate path.
+2. Validate openability, wrapper root, expected files, checksum, and manifest.
+3. Only then present the candidate as the final artifact.
+4. If validation fails, do not reuse the failed candidate name as if it passed.
 
 ## Handoff Standard
 

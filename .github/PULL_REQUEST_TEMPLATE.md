@@ -21,6 +21,7 @@ If this PR came from a Telegram discussion, include the sanitized context or lin
 
 - [ ] I checked open PRs and existing overlap before starting or before submitting this PR.
 - [ ] No real secrets, tokens, keys, cookies, sessions, or credential bodies are included.
+- [ ] No private reference names, paths, examples, logs, source text, or provenance are included.
 - [ ] No local filesystem, CI, cloud, host, or production access is overclaimed.
 - [ ] Root Markdown file count remains intentional.
 - [ ] Secret-sensitive paths are handled by path name only.
@@ -30,8 +31,10 @@ If this PR came from a Telegram discussion, include the sanitized context or lin
 ## Validation
 
 - [ ] `python3 scripts/validate_workspace.py`
+- [ ] `python3 scripts/validate_eval_fixtures.py`, if eval or Preview behavior changed
 - [ ] `python3 -m py_compile scripts/*.py`
 - [ ] `python3 scripts/build_release_zip.py`, if packaging changed
+- [ ] `python3 scripts/validate_release_artifacts.py`, if packaging changed
 - [ ] `python3 scripts/sync_labels.py`, if labels or issue templates changed
 - [ ] GPT Builder Preview test, if behavior changed
 - [ ] Not run, with reason:

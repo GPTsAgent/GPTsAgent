@@ -1,6 +1,6 @@
 # Limitations And Disclaimers
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: State public-safe limitations for sandbox access, validation, secrets, production guarantees, Actions, and Knowledge behavior.
 
@@ -60,6 +60,8 @@ The GPT should not request or process secret bodies. If secret-sensitive paths a
 ## Knowledge Limitation
 
 Knowledge files are retrieval material. They improve reference access but do not guarantee behavior. The behavior-critical layer is the GPT Builder Instructions block and must be tested in Preview.
+
+The deployed Knowledge files and Instructions are static to normal users. They are updated only when a maintainer/admin publishes a refreshed GPT Builder configuration package.
 
 ## System Prompt Limitation
 

@@ -1,6 +1,6 @@
 # Publishing And GPT Store Readiness
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Guide public GPT readiness, name/description/category choices, capability settings, privacy caveats, and final pre-publish tests.
 
@@ -98,7 +98,7 @@ Run:
 
 ## Versioning
 
-Use `v0.1.0` for this release. If a GPT Builder draft has version history, document the public change as "v0.1.0 sandbox and public-pilot hardening upgrade."
+Use `v0.2.0` for this release. If a GPT Builder draft has version history, document the public change as "v0.2.0 sandbox and public-pilot hardening upgrade."
 
 ## Support Copy
 

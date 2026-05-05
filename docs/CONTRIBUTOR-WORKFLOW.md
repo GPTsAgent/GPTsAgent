@@ -37,7 +37,10 @@ Then:
 |---|---|
 | Telegram discussion | Open the Contribution Idea issue template with a sanitized summary. |
 | Small docs fix | Open a Pull Request after validation. |
+| New file or directory | Check `docs/BOUNDARY-AND-STATE-CONTRACT.md` before adding it. |
 | Safety or validation gap | Open a GitHub Issue first, then patch it. |
+| Private reference input | Follow `docs/REFERENCE-DISTILLATION-POLICY.md`; do not paste the reference or source identity into public issues. |
+| AI-agent workflow change | Check `docs/AGENT-OPERATING-PATTERNS.md` and keep the workflow bounded, validated, and public-safe. |
 | Unclear scope | Ask in Telegram, then write the narrowest issue possible. |
 | GPT Builder or launch change | Check `docs/OFFICIAL-DOCS-BASIS.md` and update `docs/PILOT-LAUNCH-CHECKLIST.md` if needed. |
 
@@ -47,6 +50,8 @@ For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 
 - Improve examples in `config/EXAMPLES.md`.
 - Add Preview test cases to `config/EVALUATION-CHECKLIST.md`.
+- Add machine-readable Preview scenarios to `eval/preview-scenarios.jsonl`.
+- Improve the Preview worksheet in `docs/PREVIEW-TEST-MATRIX.md`.
 - Clarify sandbox boundary wording.
 - Improve contributor docs.
 - Add safe, sanitized report templates.
@@ -57,8 +62,11 @@ For the full public channel and label model, see `docs/COMMUNITY-PLAYBOOK.md`.
 ## Change Rules
 
 - Keep `config/` at exactly 20 Markdown files.
+- Place new files only in the zone defined by `docs/BOUNDARY-AND-STATE-CONTRACT.md`.
 - Check open PRs before editing and stop or narrow the work if another PR owns the same files.
 - Do not paste secrets, private keys, cookies, sessions, tokens, or private data.
+- Do not paste private reference source text, names, paths, logs, examples, or provenance into public issues, PRs, fixtures, or docs.
+- Do not paste local agent logs, shell snapshots, model caches, auth state, or runtime databases into public issues, PRs, fixtures, or docs.
 - Do not claim ChatGPT can directly access a user's local computer.
 - Update `instructions/` with `python3 scripts/extract_instructions.py` when the Instructions block changes.
 - Use `NOT VERIFIED` for claims that were not actually tested.
@@ -81,8 +89,10 @@ Run the baseline checks:
 ```bash
 python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
+python3 scripts/validate_eval_fixtures.py
 python3 -m py_compile scripts/*.py
 python3 scripts/build_release_zip.py
+python3 scripts/validate_release_artifacts.py
 ```
 
 If the PR changes labels or issue templates, also run:

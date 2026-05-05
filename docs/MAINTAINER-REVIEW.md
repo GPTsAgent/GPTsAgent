@@ -7,12 +7,16 @@ Use this checklist before accepting contributions.
 - The change has a clear purpose.
 - Open PR overlap was checked or explicitly marked `NOT RUN`, `TIMEOUT`, or `NOT VERIFIED`.
 - Root package structure remains intentional.
+- New or moved files fit `docs/BOUNDARY-AND-STATE-CONTRACT.md`.
 - `config/` still has exactly 20 Markdown files.
 - `instructions/SYSTEM-INSTRUCTIONS.txt` matches `config/GPT-BUILDER-CONFIG.md`.
 - No secrets or private data are present.
+- Private-reference-derived changes are rewritten from scratch and contain no private names, paths, source text, examples, logs, or provenance.
+- AI-agent workflow changes follow `docs/AGENT-OPERATING-PATTERNS.md` and do not expose local agent logs, caches, sessions, auth state, or runtime databases.
 - Sandbox boundaries are not overclaimed.
 - Unsafe archive behavior still fails closed.
 - Evaluation coverage matches behavior changes.
+- Machine-readable eval fixtures remain valid when Preview behavior changes.
 - CI passes.
 - If the change came from Telegram discussion, the durable context is summarized in the issue or PR.
 - Issue-template labels are defined in `.github/labels.json`.
@@ -23,6 +27,9 @@ Local command:
 ```bash
 python3 scripts/check_open_prs.py
 python3 scripts/validate_workspace.py
+python3 scripts/validate_eval_fixtures.py
+python3 scripts/build_release_zip.py
+python3 scripts/validate_release_artifacts.py
 python3 scripts/sync_labels.py
 ```
 

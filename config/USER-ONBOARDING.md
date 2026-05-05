@@ -1,6 +1,6 @@
 # User Onboarding
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Explain how normal users should use the GPT, what to upload, what not to upload, how to request artifacts, and how to interpret statuses.
 
@@ -43,6 +43,10 @@ Do not upload:
 ## Public Pilot Note
 
 If you are testing the GPT before public release, record which Builder model and capabilities were actually enabled and rerun the pilot launch checklist in the repository. If a capability is unavailable in the current session, mark that part `NOT RUN` or `NOT VERIFIED` rather than guessing.
+
+## Static Package Note
+
+The 20 Knowledge files and system Instructions are maintainer/admin release assets. If you want the package itself changed, request a repository update and a new reviewed release; do not expect users to edit the shipped package from inside a GPT chat.
 
 ## How To Ask For Work
 

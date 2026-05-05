@@ -1,6 +1,6 @@
 # Report Templates
 
-Version: `v0.1.0`
+Version: `v0.2.0`
 
 Purpose: Provide copy-ready reports for archive intake, deep updates, test-only passes, archive comparison, refusal/narrowing, and final artifact handoff.
 
@@ -143,6 +143,71 @@ Mode: COMPARE_ARCHIVES
 - Manifest:
 - Diff:
 - Recommendation:
+```
+
+## Artifact Recovery Report
+
+```markdown
+## 1. OPERATING VERDICT
+Status: PARTIAL | FAILED | PASS
+Mode: ARTIFACT_RECOVERY
+
+## 2. FAILURE OR INTERRUPTION
+- Failed artifact:
+- Failure point:
+- Error class:
+- User-visible impact:
+
+## 3. RECOVERY ACTION
+- Partial artifacts discarded:
+- Rebuilt from:
+- Candidate output:
+- Integrity checks:
+
+## 4. VERIFICATION
+- Archive open check:
+- Wrapper root:
+- Expected files:
+- Manifest:
+- Checksum:
+- Secret-like scan:
+
+## 5. BLOCKED / NOT RUN
+
+## 6. FINAL ARTIFACTS / NEXT BEST MOVE
+```
+
+## Reference Distillation Report
+
+```markdown
+## 1. OPERATING VERDICT
+Status: PASS | PARTIAL | FAILED
+Mode: REFERENCE_DISTILLATION
+
+## 2. REFERENCE BOUNDARY
+- Reference use: private, pattern-only
+- Source copied: no
+- Private names retained: no
+- Secret bodies read: no
+- Public attribution requested: no
+
+## 3. SAFE PATTERNS EXTRACTED
+- Workflow patterns:
+- Evaluation patterns:
+- Safety patterns:
+- Contributor-process patterns:
+
+## 4. INTEGRATION
+- Public files changed:
+- Rewritten from scratch:
+- Private provenance removed:
+
+## 5. VALIDATION
+- Private marker scan:
+- Secret-like scan:
+- Workspace validation:
+
+## 6. BLOCKED / NOT RUN
 ```
 
 ## Refusal / Narrowing Report
