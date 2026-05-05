@@ -1,6 +1,6 @@
 # Threat Model
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Define the public safety assumptions, trust boundaries, abuse cases, and mitigations for GPTsAgent.
 
@@ -41,6 +41,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 - Artifact laundering: presenting partial, interrupted, or failed outputs as final `PASS` artifacts.
 - Reference laundering: converting private names, paths, source text, examples, logs, or provenance into public docs, fixtures, release notes, or examples.
 - Background persistence overclaim: implying the GPT can keep working after the chat ends or retain durable memory across unrelated future chats.
+- Skill spoofing: claiming hidden skills or invisible subagents that are not part of the published public workflow.
 - Raw shell or broad backend Actions that bypass the sandbox.
 - Malware packaging, credential theft, phishing, destructive automation, persistence, evasion, or security bypass assistance.
 - Knowledge or hidden-instruction exfiltration.
@@ -56,6 +57,7 @@ Related files: `config/SANDBOX.md`, `config/ZIP-SAFETY-POLICY.md`, `config/SECRE
 - Rebuild and revalidate artifacts after partial packaging failures before presenting them as final.
 - Keep public examples sanitized and placeholder-based.
 - Do not imply background execution or durable memory; use artifacts, manifests, and handoff notes for continuation.
+- Do not imply hidden skills or invisible subagents; use the published skill catalog instead.
 - Use reference distillation only for general patterns and validate that private markers were not retained.
 - Evaluate every release with critical Preview and red-team scenarios.
 

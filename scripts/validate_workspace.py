@@ -16,7 +16,7 @@ AGENTS = ROOT / "AGENTS.md"
 CONFIG_README = CONFIG / "README.md"
 EVAL_SCENARIOS = ROOT / "eval" / "preview-scenarios.jsonl"
 TELEGRAM_URL = "https://t.me/GPTsAgentChat"
-EXPECTED_VERSION = "v0.2.0"
+EXPECTED_VERSION = "v0.3.0"
 
 EXPECTED_CONFIG_FILES = [
     "ACTIONS-API-BLUEPRINT.md",
@@ -56,6 +56,7 @@ COMMUNITY_FILES = [
     Path("docs/BOUNDARY-AND-STATE-CONTRACT.md"),
     Path("docs/AGENT-OPERATING-PATTERNS.md"),
     Path("docs/COMMAND-SESSION-PATTERNS.md"),
+    Path("docs/SKILL-CATALOG.md"),
     Path("docs/CONTRIBUTOR-WORKFLOW.md"),
     Path("docs/COMMUNITY-PLAYBOOK.md"),
     Path("docs/OFFICIAL-DOCS-BASIS.md"),
@@ -311,7 +312,7 @@ def main() -> int:
         ),
         check(PROFILE.exists(), "profile README exists"),
         check("GPTsAgent" in profile_text and "Sandbox File Operator" in profile_text, "profile README names GPTsAgent and Sandbox File Operator"),
-        check("v0.2.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
+        check("v0.3.0" in root_readme_text and "public pilot" in root_readme_text.lower(), "root README states the public pilot version and status"),
         check(
             "## Static Package Model" in root_readme_text
             and "maintainer" in root_readme_text.lower()
@@ -319,6 +320,7 @@ def main() -> int:
             "root README explains the static maintainer-updated package model",
         ),
         check("command/session patterns" in root_readme_text.lower() and "docs/COMMAND-SESSION-PATTERNS.md" in root_readme_text, "root README documents command/session patterns"),
+        check("skill catalog" in root_readme_text.lower() and "docs/SKILL-CATALOG.md" in root_readme_text, "root README documents skill catalog"),
         check("static Builder package" in profile_text and "maintainers/admins publish the Instructions and 20 Knowledge files" in profile_text, "profile README explains the static builder package model"),
         check(AGENTS.exists(), "root AGENTS.md exists for AI-agent contributors"),
         check("scripts/check_open_prs.py" in agents_text and "open pr" in agents_text.lower(), "root AGENTS.md requires open PR coordination"),
@@ -337,6 +339,7 @@ def main() -> int:
         check("THREAT-MODEL.md" in evaluation_text and "eval/preview-scenarios.jsonl" in evaluation_text, "evaluation checklist points to threat model and eval fixtures"),
         check("reference-distillation-private" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include private-reference distillation coverage"),
         check("model-selection-not-overclaim" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include model-selection overclaim coverage"),
+        check("skill-catalog-honesty" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include skill catalog honesty coverage"),
         check("static-package-update-request" in {str(item.get("id")) for item in eval_scenarios}, "eval scenarios include static package update boundary coverage"),
         check("docs/REFERENCE-DISTILLATION-POLICY.md" in root_readme_text and "REFERENCE_DISTILLATION" in read(CONFIG / "FILE-WORKFLOW.md"), "root docs and workflow cover private-reference distillation"),
         check("docs/MODEL-SELECTION.md" in root_readme_text and "ChatGPT Builder" in model_selection_text and "Codex" in model_selection_text and "NOT VERIFIED" in model_selection_text, "model-selection guidance separates Codex-local preference from public Builder evidence"),
@@ -349,7 +352,9 @@ def main() -> int:
             "config README states users cannot update Knowledge or Instructions inside GPT sessions",
         ),
         check("static package boundary" in prompt_library_text.lower() and "deployed package is static" in prompt_library_text.lower(), "prompt library includes static package boundary prompt"),
+        check("Choose The Right Skill" in prompt_library_text and "least-powerful fit" in prompt_library_text, "prompt library includes skill selection prompt"),
         check("Example 15: Static Package Boundary" in examples_text and "maintainer/admin must update the repository package" in examples_text, "examples include static package boundary behavior"),
+        check("Example 18: Skill Selection" in examples_text and "least-powerful fit" in examples_text, "examples include skill selection behavior"),
         check("Static Package Note" in onboarding_text and "maintainer/admin release assets" in onboarding_text, "user onboarding explains the static package model"),
         check("static to normal users" in limitations_text and "maintainer/admin publishes a refreshed GPT Builder configuration package" in limitations_text, "limitations file states deployed Knowledge and Instructions are static"),
         check("Update your Knowledge files from this chat" in refusal_text and "deployed package is static" in refusal_text, "safety refusal policy covers static package rewrite requests"),

@@ -1,12 +1,12 @@
 # Agent Operating Patterns
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Capture public-safe maintainer-agent patterns distilled from private local agent tooling without copying private paths, project names, logs, or source text.
 
 Use this file when: improving GPTsAgent contributor workflows, AI-agent maintenance rules, review processes, or validation discipline.
 
-Related files: `AGENTS.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/MAINTAINER-REVIEW.md`, `docs/COMMAND-SESSION-PATTERNS.md`
+Related files: `AGENTS.md`, `CONTRIBUTING.md`, `docs/CONTRIBUTOR-WORKFLOW.md`, `docs/MAINTAINER-REVIEW.md`, `docs/COMMAND-SESSION-PATTERNS.md`, `docs/SKILL-CATALOG.md`
 
 ## Core Rule
 
@@ -19,9 +19,10 @@ Private maintainer tooling may inspire GPTsAgent's public process, but only gene
 | Layered read order | Start with repo `AGENTS.md`, then `README.md`, contributor docs, and only the files relevant to the change. |
 | Short session card | Keep a compact task brief: scope, source, protected surfaces, intended outputs, validation, and unknowns. |
 | Mode catalog and session map | Surface the least-powerful mode, allowed operations, blocked operations, artifacts, and unknowns before broad work starts. |
+| Visible command surface | Keep the public catalog small and browseable; surface stable workflows first and lazy-load or gate heavyweight surfaces until they are actually needed. |
 | Safe-surface map | Separate human-readable docs from runtime state, caches, logs, credentials, generated outputs, and release artifacts. |
 | Boundary contract | Define which repository zones are canonical write targets and fail closed when placement is unclear. |
-| Curated skills | Prefer a small list of named workflows over a dump of every possible agent behavior. |
+| Curated skills | Prefer a small list of named workflows and published skill contracts over a dump of every possible agent behavior. |
 | Historical evidence boundary | Treat old logs, old reports, and previous sessions as evidence, not current truth. |
 | Targeted validation | Validate the changed surface early and narrowly before running broader release checks. |
 | Opposite-lane review | Use adversarial review for safety-sensitive changes without letting the reviewer edit the work under review. |

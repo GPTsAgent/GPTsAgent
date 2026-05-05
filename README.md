@@ -4,7 +4,7 @@ Canonical development workspace for GPTsAgent.
 
 GPTsAgent is an open project for building a disciplined GPT Builder wrapper around ChatGPT.com sandbox work. The current flagship package is **Sandbox File Operator**: a Custom GPT configuration that makes uploaded file and ZIP archive work more agent-like while staying honest about sandbox boundaries.
 
-Current package version: `v0.2.0`.
+Current package version: `v0.3.0`.
 
 This repository is a public pilot. It is intended to be cloneable, reviewable, and easy for contributors to improve without confusing it with a private host-level project.
 
@@ -34,7 +34,7 @@ No dependency installation is required for the core checks. Python 3.10+ and Git
 | `instructions/` | The canonical system Instructions block extracted from `config/GPT-BUILDER-CONFIG.md`. |
 | `profile/` | Organization profile README source for `GPTsAgent/.github`. |
 | `scripts/` | Local PR coordination, validation, instruction extraction, and release ZIP helpers. |
-| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, command/session patterns, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md` and `docs/COMMAND-SESSION-PATTERNS.md`. |
+| `docs/` | Contributor workflow, community playbook, boundary/state contract, agent operating patterns, command/session patterns, skill catalog, model selection, roadmap, architecture, release, and maintainer documentation. See `docs/BOUNDARY-AND-STATE-CONTRACT.md`, `docs/COMMAND-SESSION-PATTERNS.md`, and `docs/SKILL-CATALOG.md`. |
 | `eval/` | Machine-readable Preview and red-team scenario fixtures. |
 | `.github/` | PR/issue templates, label taxonomy, Dependabot, CODEOWNERS placeholder, and CI for contributions. |
 | `AGENTS.md` | Repo-local rules for AI agents and contributor automation. |

@@ -1,6 +1,6 @@
 # Model Selection Notes
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Separate Codex-local maintainer model preferences from public ChatGPT Builder runtime settings.
 

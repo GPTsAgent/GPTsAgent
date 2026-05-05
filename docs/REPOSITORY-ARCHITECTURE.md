@@ -43,6 +43,7 @@ Use it for sanitized conversation, not for secrets or unreviewed production clai
 | `AGENTS.md` | AI-agent preflight, ownership, validation, and safety rules. |
 | `docs/AGENT-OPERATING-PATTERNS.md` | Public-safe patterns for AI-assisted maintainer work, skill contracts, and private-reference intake. |
 | `docs/COMMAND-SESSION-PATTERNS.md` | Public-safe distillation of mode catalogs, session maps, task states, and permission ladders. |
+| `docs/SKILL-CATALOG.md` | Public-safe catalog of named skills, prompt contracts, and selection rules. |
 | `docs/BOUNDARY-AND-STATE-CONTRACT.md` | Repository zone contract, canonical write targets, generated surfaces, and release state rules. |
 | `docs/CONTRIBUTOR-WORKFLOW.md` | Step-by-step first contribution path. |
 | `docs/COMMUNITY-PLAYBOOK.md` | Channel rules, Telegram-to-GitHub conversion, label model, and triage. |

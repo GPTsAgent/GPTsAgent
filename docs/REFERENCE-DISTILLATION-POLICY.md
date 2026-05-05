@@ -1,6 +1,6 @@
 # Reference Distillation Policy
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Define how GPTsAgent may learn from a private reference archive, project, document, or transcript without copying, exposing, naming, or preserving private source material.
 

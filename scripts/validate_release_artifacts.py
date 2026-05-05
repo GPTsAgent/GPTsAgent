@@ -66,6 +66,7 @@ def main() -> int:
         "GPTsAgent/docs/BOUNDARY-AND-STATE-CONTRACT.md",
         "GPTsAgent/docs/AGENT-OPERATING-PATTERNS.md",
         "GPTsAgent/docs/COMMAND-SESSION-PATTERNS.md",
+        "GPTsAgent/docs/SKILL-CATALOG.md",
         "GPTsAgent/docs/MODEL-SELECTION.md",
         "GPTsAgent/docs/PREVIEW-TEST-MATRIX.md",
         "GPTsAgent/docs/REFERENCE-DISTILLATION-POLICY.md",

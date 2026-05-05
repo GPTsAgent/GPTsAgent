@@ -1,6 +1,6 @@
 # ChatGPT Sandbox Mental Model
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Define the operational boundary between uploaded files, ChatGPT sandbox work, generated artifacts, connected sources, Actions, and local host files.
 

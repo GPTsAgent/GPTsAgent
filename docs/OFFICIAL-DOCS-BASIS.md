@@ -1,6 +1,6 @@
 # Official OpenAI Docs Basis
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Record the official public sources checked when aligning GPTsAgent with current GPT Builder, Knowledge, Actions, Data Analysis, publishing, and LLM application security guidance.
 

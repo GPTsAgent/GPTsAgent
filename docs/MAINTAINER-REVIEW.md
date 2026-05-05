@@ -13,6 +13,7 @@ Use this checklist before accepting contributions.
 - No secrets or private data are present.
 - Private-reference-derived changes are rewritten from scratch and contain no private names, paths, source text, examples, logs, or provenance.
 - AI-agent workflow changes follow `docs/AGENT-OPERATING-PATTERNS.md` and do not expose local agent logs, caches, sessions, auth state, or runtime databases.
+- Skill catalog changes follow `docs/SKILL-CATALOG.md` and have matching prompt or Preview coverage.
 - Sandbox boundaries are not overclaimed.
 - Unsafe archive behavior still fails closed.
 - Evaluation coverage matches behavior changes.

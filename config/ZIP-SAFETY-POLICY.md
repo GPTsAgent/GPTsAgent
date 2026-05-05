@@ -1,6 +1,6 @@
 # ZIP Safety Policy
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Define pre-extraction gates, unsafe archive structures, secret-sensitive path handling, and fail-closed reporting language.
 

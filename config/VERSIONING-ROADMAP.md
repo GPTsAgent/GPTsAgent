@@ -1,6 +1,6 @@
 # Versioning Roadmap
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Document the public package version, pre-1.0 policy, future Actions backend, future eval harness, and specialized skill packs.
 
@@ -18,17 +18,25 @@ This public repository uses pre-1.0 versions because GPTsAgent is an early publi
 |---|---|---|
 | `v0.1.x` | Public-pilot baseline | Documentation, contributor flow, validation, packaging, and Preview evidence. |
 | `v0.2.x` | Workflow hardening | Better examples, compare/update flows, artifact manifests, and edge-case ZIP policies. |
-| `v0.3.x` | Evaluation expansion | Structured Preview worksheets, adversarial fixtures, regression records, and release evidence. |
+| `v0.3.x` | Session discipline and evaluation expansion | Visible skill catalogs, command/session patterns, structured Preview worksheets, adversarial fixtures, regression records, and release evidence. |
 | `v0.4.x` | Integration design | Optional Actions backend design remains design-only until real infrastructure exists. |
 | `v1.0.0` | Stable public baseline | Publish only after repeatable Preview results, mature contributor process, and maintainer signoff. |
 
 ## Current Version
 
-`v0.2.0`
+`v0.3.0`
 
-Release theme: public-pilot hardening for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
+Release theme: command/session discipline, visible skill catalog, and evaluation expansion for a production-grade Custom GPT operating wrapper for uploaded files, ZIP archives, sandbox sessions, validation, and public GPT readiness.
 
-## v0.2.0 Scope
+## v0.3.0 Scope
+
+- Added a visible skill catalog and stronger skill-selection prompts.
+- Added command/session pattern guidance that keeps the session map compact and honest.
+- Expanded Preview and red-team coverage for hidden-skill overclaim and least-powerful skill selection.
+- Kept the deployed GPT statically maintained by a maintainer or admin rather than user-editable from inside the chat.
+- Preserved the 20-file Knowledge boundary and public-safe reference distillation rules.
+
+## v0.2.0 Scope (previous release)
 
 - Machine-readable Preview and red-team scenarios added under `eval/`.
 - Dependency-free eval fixture validation added.

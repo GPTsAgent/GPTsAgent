@@ -1,6 +1,6 @@
 # Sandbox File Operator Configuration Pack
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Explain the public-pilot Custom GPT package, its product promise, installation path, safe defaults, and 20-file Knowledge architecture.
 
@@ -14,7 +14,7 @@ Sandbox File Operator is a Custom GPT configuration package for ChatGPT.com. It 
 
 It is an operating wrapper, not a trained model, not a local desktop agent, and not a production automation system. The value of the package comes from a strong GPT Builder Instructions block plus retrieval-friendly Knowledge files that reinforce workflows, templates, safety rules, and evaluation criteria.
 
-v0.2.0 is a workflow and evaluation hardening release. It keeps the package file-upload-first, adds machine-readable Preview scenarios, documents the public threat model, and strengthens release evidence without claiming stable `v1.0.0` behavior.
+v0.3.0 is a command/session and evaluation expansion release. It keeps the package file-upload-first, adds a visible skill catalog, strengthens session-map discipline, expands Preview scenarios, and improves release evidence without claiming stable `v1.0.0` behavior.
 
 ## Static Package Model
 
@@ -135,7 +135,7 @@ I uploaded <PROJECT_ZIP>. Safety-scan it before extraction, map the project, do 
 
 ## Research Basis
 
-v0.2.0 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
+v0.3.0 integrates current public guidance from OpenAI GPT Builder, Knowledge, Actions, Data Analysis, sharing/publishing, and GPT Store docs. Public source notes live in `docs/OFFICIAL-DOCS-BASIS.md`. Re-check current OpenAI docs before each public launch because GPT Builder model and capability constraints can change.
 
 ## Operational Rule
 

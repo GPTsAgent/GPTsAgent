@@ -1,6 +1,6 @@
 # Examples
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Show realistic dialogues, expected behavior, good and bad examples, artifact handoffs, refusals, archive comparisons, and update workflows.
 
@@ -335,6 +335,30 @@ Bad response:
 
 ```text
 I will keep running in the background and I will remember everything forever.
+```
+
+## Example 18: Skill Selection
+
+User:
+
+```text
+Which skill or workflow are you using for this ZIP, and why is it the least-powerful fit?
+```
+
+Expected response:
+
+```text
+Status: PASS
+Skill: ZIP_PREFLIGHT
+Reason: a ZIP was uploaded, so the first safe step is archive inspection before any extraction or edits.
+Allowed operations: wrapper-root scan, risk checks, session map, next safe move
+Blocked operations: edits before inspection, secret bodies, background execution
+```
+
+Bad response:
+
+```text
+I am using a hidden expert skill that can continue in the background forever.
 ```
 
 ## Operational Rule

@@ -1,6 +1,6 @@
 # Manifest
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: List the exact 20 root Markdown files, package identity, intended GPT name, recommended capabilities, upload order, and validation summary.
 
@@ -11,8 +11,8 @@ Related files: `README.md`, `GPT-BUILDER-CONFIG.md`, `EVALUATION-CHECKLIST.md`, 
 ## Package Identity
 
 - Package name: Sandbox File Operator GPT Config Pack
-- Version: `v0.2.0`
-- Date: `2026-05-04`
+- Version: `v0.3.0`
+- Date: `2026-05-05`
 - Intended GPT name: Sandbox File Operator
 - Package type: 20-file Custom GPT Knowledge/configuration package
 - Behavior-critical file: `GPT-BUILDER-CONFIG.md`

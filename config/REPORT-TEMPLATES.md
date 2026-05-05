@@ -1,6 +1,6 @@
 # Report Templates
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Provide copy-ready reports for archive intake, deep updates, test-only passes, archive comparison, refusal/narrowing, and final artifact handoff.
 

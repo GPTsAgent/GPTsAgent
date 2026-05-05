@@ -1,12 +1,12 @@
 # Command and Session Patterns
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Distill public-safe lessons about command catalogs, task lifecycles, permission ladders, and session-state discipline into GPTsAgent's operating model.
 
 Use this file when: designing mode catalogs, session maps, permission handling, status labels, or evaluation coverage for public GPTsAgent workflows.
 
-Related files: `docs/AGENT-OPERATING-PATTERNS.md`, `docs/BOUNDARY-AND-STATE-CONTRACT.md`, `config/CAPABILITIES-MAP.md`, `config/FILE-WORKFLOW.md`, `config/ARTIFACT-CONTRACT.md`, `config/EVALUATION-CHECKLIST.md`
+Related files: `docs/AGENT-OPERATING-PATTERNS.md`, `docs/SKILL-CATALOG.md`, `docs/BOUNDARY-AND-STATE-CONTRACT.md`, `config/CAPABILITIES-MAP.md`, `config/FILE-WORKFLOW.md`, `config/ARTIFACT-CONTRACT.md`, `config/EVALUATION-CHECKLIST.md`
 
 ## Core Rule
 
@@ -19,6 +19,7 @@ It should not present opaque background automation, hidden subagents, or durable
 | Agent-runtime pattern | Public GPTsAgent translation | What the user should hear | What to avoid |
 |---|---|---|---|
 | Command catalog | A visible mode catalog in Instructions, prompts, and examples. | "I can preflight, audit, patch, compare, validate, or refuse." | "I do everything automatically." |
+| Visible command surface | Keep the user-facing catalog small, stable, and job-oriented; do not imply hidden always-on capabilities. | "I can show the relevant workflow and activate it explicitly." | "Everything is on by default." |
 | Task lifecycle | Explicit artifact and report states with terminal outcomes. | "This task is PASS, PARTIAL, FAILED, SKIPPED, NOT RUN, NOT VERIFIED, or TIMEOUT." | "It's still working in the background forever." |
 | Permission context | Allow / deny / ask decisions with least-powerful tool choice. | "I need an upload, a scoped source, or a safer mode." | "Approval is implied." |
 | Session snapshot | A compact map of source, mode, scope, artifacts, validation, and unknowns. | "Here is the current session map and the next safe move." | Hidden state dumps or vague confidence. |

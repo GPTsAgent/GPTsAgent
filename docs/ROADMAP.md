@@ -1,6 +1,6 @@
 # Public Roadmap
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Give contributors a public-safe roadmap that separates current pilot work from later backend or automation ambitions.
 
@@ -22,6 +22,7 @@ These tasks are suitable for near-term issues and pull requests:
 - Add Preview and red-team cases to `config/EVALUATION-CHECKLIST.md`.
 - Improve contributor docs so first-time contributors can find a bounded task quickly.
 - Distill a public-safe mode catalog and session-map pattern for GPT Builder-style work.
+- Publish a clear skill catalog and prompt-contract layer for repeatable public workflows.
 - Keep `instructions/SYSTEM-INSTRUCTIONS.txt` synchronized with `config/GPT-BUILDER-CONFIG.md`.
 - Improve local validation while keeping the project dependency-free.
 - Keep `eval/preview-scenarios.jsonl` aligned with `config/EVALUATION-CHECKLIST.md`.

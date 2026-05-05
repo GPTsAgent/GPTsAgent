@@ -1,6 +1,6 @@
 # Artifact Contract
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Define artifact types, required metadata, validation statuses, integrity checks, and handoff standards.
 

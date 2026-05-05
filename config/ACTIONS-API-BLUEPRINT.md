@@ -1,6 +1,6 @@
 # Actions API Blueprint
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Design an optional future Actions backend with safe high-level endpoints, authentication, privacy, audit logging, rate limits, and artifact expiration.
 

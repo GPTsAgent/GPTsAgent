@@ -1,6 +1,6 @@
 # Community Playbook
 
-Version: `v0.2.0`
+Version: `v0.3.0`
 
 Purpose: Explain how Telegram, GitHub Issues, Pull Requests, labels, and maintainer review fit together for a public open-source GPT configuration project.
 
